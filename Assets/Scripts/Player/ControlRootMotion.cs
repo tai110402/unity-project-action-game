@@ -8,11 +8,14 @@ public class ControlRootMotion : MonoBehaviour
     private PlayerMovement _playerMovement;
     private float _speedOnRootMotion = 0.05f;
 
+    [SerializeField] private int _indexOfAxeLayer = 1;
+    [SerializeField] private string[] _useRootMotionAxeAnimationArray;
 
     [SerializeField] private int _indexOfSwordLayer = 2;
     [SerializeField] private string[] _useRootMotionSwordAnimationArray;
 
-    private bool isUse;
+    private bool _isSwordUse;
+    private bool _isAxeUse;
 
     // Start is called before the first frame update
     void Start()
@@ -31,12 +34,30 @@ public class ControlRootMotion : MonoBehaviour
                 if (_playerAnimator.GetCurrentAnimatorStateInfo(_indexOfSwordLayer).IsName(_useRootMotionSwordAnimationArray[i]))
                 {
                     ApplyRootMotion();
-                    isUse = true;
+                    _isSwordUse = true;
                     break;
                 }
-                isUse = false;
+                _isSwordUse = false;
             }
-            if (isUse == false)
+            if (_isSwordUse == false)
+            {
+                ApplyCustomMotion();
+            }
+        }
+
+        if (true)
+        {
+            for (int i = 0; i < _useRootMotionAxeAnimationArray.Length; i++)
+            {
+                if (_playerAnimator.GetCurrentAnimatorStateInfo(_indexOfAxeLayer).IsName(_useRootMotionAxeAnimationArray[i]))
+                {
+                    ApplyRootMotion();
+                    _isAxeUse = true;
+                    break;
+                }
+                _isAxeUse = false;
+            }
+            if (_isAxeUse == false)
             {
                 ApplyCustomMotion();
             }
