@@ -88,7 +88,7 @@ public class PlayerSword : MonoBehaviour, IPlayerWeapon
         if (Time.time - skillStartTime > skill.TimeCoolDown[skill.Level-1])
         {
             skillStartTime = Time.time;
-            _playerAnimator.CrossFade(skill.AnimationName, 0f, _indexOfSwordAnimatorLayer);
+            _playerAnimator.CrossFade(skill.AnimationName, 0.05f, _indexOfSwordAnimatorLayer);
         }
         return skillStartTime;
     }
