@@ -37,7 +37,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": true,
+            "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -229,7 +229,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": false,
+            "IsUsing": true,
             "Level": 4,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -277,7 +277,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": true,
+            "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -383,8 +383,8 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": false,
-            "Level": 4,
+            "IsUsing": true,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 20,
@@ -441,7 +441,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": true,
+            "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -547,8 +547,8 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": false,
-            "Level": 4,
+            "IsUsing": true,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 10,
@@ -595,7 +595,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": true,
+            "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -692,7 +692,7 @@
             ],
             "IsUnlocked": true,
             "IsUsing": true,
-            "Level": 4,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 10,
@@ -738,8 +738,8 @@
                     ]
                 }
             ],
-            "IsUnlocked": true,
-            "IsUsing": true,
+            "IsUnlocked": false,
+            "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -753,11 +753,11 @@
         {
             "AnimationName": "FirstAxeSkill001",
             "TimeCoolDown": [
-                15.0,
-                14.0,
-                13.0,
-                12.0,
-                11.0
+                5.0,
+                4.0,
+                3.0,
+                2.0,
+                2.0
             ],
             "SlashArray": [
                 {
@@ -845,7 +845,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": false,
+            "IsUsing": true,
             "Level": 5,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -903,8 +903,8 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": true,
-            "Level": 4,
+            "IsUsing": false,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 20,
@@ -962,7 +962,7 @@
             ],
             "IsUnlocked": true,
             "IsUsing": false,
-            "Level": 4,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 20,
@@ -1009,7 +1009,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": false,
+            "IsUsing": true,
             "Level": 5,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -1057,8 +1057,8 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": true,
-            "Level": 4,
+            "IsUsing": false,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 10,
@@ -1106,7 +1106,7 @@
             ],
             "IsUnlocked": true,
             "IsUsing": false,
-            "Level": 4,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 10,
