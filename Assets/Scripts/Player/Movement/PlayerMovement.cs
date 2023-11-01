@@ -102,7 +102,17 @@ public class PlayerMovement : MonoBehaviour
                 _currentSpeed = 0f;
             }
 
-            _playerAnimator.SetFloat(_movementParameterHash, 0.0f);
+            if (_playerAnimator.GetFloat(_movementParameterHash) > 0.0f)
+            {
+                _playerAnimator.SetFloat(_movementParameterHash, _playerAnimator.GetFloat(_movementParameterHash) - 0.05f);
+            } 
+            else if (_playerAnimator.GetFloat(_movementParameterHash) < 0.0f)
+            {
+                _playerAnimator.SetFloat(_movementParameterHash, 0.0f);
+            }
+
+
+            //_playerAnimator.SetFloat(_movementParameterHash, 0.0f);
 
             Rotation(_camXZDirection.forward, _rotateSpeed);
         }
