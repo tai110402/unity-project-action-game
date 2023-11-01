@@ -40,18 +40,6 @@ public class PlayerGrapple : MonoBehaviour
     public bool IsGrapplePressed { set { _isGrapplePressed = value; } get { return _isGrapplePressed; } }
     public bool IsMoveOnGrapplePressed { set { _isMoveOnGrapplePressed = value; } get { return _isMoveOnGrapplePressed; } }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -62,16 +50,11 @@ public class PlayerGrapple : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (_isGrapplePressed && !_isGrappling && !IsGrounded())
-        //{
-        //    SetUpForGrapple();
-        //    Debug.Log("here");
-        //}
-
         if (_isGrappling)
         {
             Grapple();
             Rotation(_camXZDirection.forward, 700f);
+            SetLinePosition();
         } 
     }
 
@@ -91,7 +74,7 @@ public class PlayerGrapple : MonoBehaviour
 
     private void Grapple()
     {
-        SetLinePosition();
+        //SetLinePosition();
 
         if (_hitSomething)
         {
@@ -114,14 +97,11 @@ public class PlayerGrapple : MonoBehaviour
             }
             else
             {
-                
                 _isGrapplePressed = false;
                 _hitSomething = false;
                 _isGrappling = false;
                 _lineRenderer.enabled = false;
-
             }
-
         }
         else
         {
