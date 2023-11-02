@@ -6,6 +6,7 @@ public class ControlRootMotion : MonoBehaviour
 {
     private Animator _playerAnimator;
     private PlayerMovement _playerMovement;
+    private PlayerWeaponManagement _playerWeaponManagement;
     private float _speedOnRootMotion = 0.05f;
 
     [SerializeField] private int _indexOfAxeLayer = 1;
@@ -22,12 +23,13 @@ public class ControlRootMotion : MonoBehaviour
     {
         _playerAnimator = GetComponent<Animator>();
         _playerMovement = GetComponent<PlayerMovement>();
+        _playerWeaponManagement = GetComponent<PlayerWeaponManagement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (true)
+        if (_playerWeaponManagement.IsSwordEquip)
         {
             for (int i = 0; i < _useRootMotionSwordAnimationArray.Length; i++)
             {
@@ -45,7 +47,7 @@ public class ControlRootMotion : MonoBehaviour
             }
         }
 
-        if (true)
+        if (_playerWeaponManagement.IsAxeEquip)
         {
             for (int i = 0; i < _useRootMotionAxeAnimationArray.Length; i++)
             {

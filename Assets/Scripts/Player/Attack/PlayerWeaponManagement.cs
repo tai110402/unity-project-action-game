@@ -21,6 +21,10 @@ public class PlayerWeaponManagement : MonoBehaviour
     private float _timeNormalClicked;
     private int _numberOfClicks;
 
+    public bool IsUnequip { get { return _isUnequip; } }
+    public bool IsSwordEquip { get { return _isSwordEquip; } }
+    public bool IsAxeEquip { get { return _isAxeEquip; } }
+
     private void Awake()
     {
         _playerInputActions = new PlayerInputActions();
