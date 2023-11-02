@@ -31,6 +31,7 @@ public class PlayerWeaponManagement : MonoBehaviour
         _playerInputActions.AttackManagement.Enable();
 
         _playerAnimator = GetComponent<Animator>();
+        _isUnequip = true;
     }
 
     // Start is called before the first frame update

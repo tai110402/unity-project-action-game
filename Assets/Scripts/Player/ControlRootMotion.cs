@@ -9,6 +9,9 @@ public class ControlRootMotion : MonoBehaviour
     private PlayerWeaponManagement _playerWeaponManagement;
     private float _speedOnRootMotion = 0.05f;
 
+    [SerializeField] private int _indexOfUnequipLayer = 0;
+    [SerializeField] private string[] _useRootMotionUnequipAnimationArray;
+
     [SerializeField] private int _indexOfAxeLayer = 1;
     [SerializeField] private string[] _useRootMotionAxeAnimationArray;
 
@@ -17,6 +20,7 @@ public class ControlRootMotion : MonoBehaviour
 
     private bool _isSwordUse;
     private bool _isAxeUse;
+    private bool _isUnequipUse;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +64,24 @@ public class ControlRootMotion : MonoBehaviour
                 _isAxeUse = false;
             }
             if (_isAxeUse == false)
+            {
+                ApplyCustomMotion();
+            }
+        }
+
+        if (_playerWeaponManagement.IsUnequip)
+        {
+            for (int i = 0; i < _useRootMotionUnequipAnimationArray.Length; i++)
+            {
+                if (_playerAnimator.GetCurrentAnimatorStateInfo(_indexOfUnequipLayer).IsName(_useRootMotionUnequipAnimationArray[i]))
+                {
+                    ApplyRootMotion();
+                    _isUnequipUse = true;
+                    break;
+                }
+                _isUnequipUse = false;
+            }
+            if (_isUnequipUse == false)
             {
                 ApplyCustomMotion();
             }

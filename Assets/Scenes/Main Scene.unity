@@ -844,7 +844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef5aa665b8f11f3498e561c788671c6b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef5aa665b8f11f3498e561c788671c6b, type: 3}
@@ -2266,6 +2266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb9d8d08d65d0849a32631773081764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _indexOfUnequipLayer: 0
+  _useRootMotionUnequipAnimationArray:
+  - DefaultBlockSkill001
   _indexOfAxeLayer: 1
   _useRootMotionAxeAnimationArray:
   - DefaultBlockSkill001
