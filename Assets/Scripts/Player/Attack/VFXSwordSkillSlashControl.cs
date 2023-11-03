@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VFXSlashControl : MonoBehaviour
+public class VFXSwordSkillSlashControl : MonoBehaviour
 {
     [SerializeField] private GameObject[] _VFXNormalSkillObject;
     [SerializeField] private GameObject[] _VFXFirstSkill001Object;
