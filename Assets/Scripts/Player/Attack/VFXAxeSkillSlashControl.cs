@@ -13,6 +13,9 @@ public class VFXAxeSkillSlashControl : MonoBehaviour
     [SerializeField] private GameObject[] _VFXSecondSkill002Object;
     [SerializeField] private GameObject[] _VFXThirdSkill002Object;
 
+    [SerializeField] private GameObject[] _VFXSecondSkill003Object;
+    [SerializeField] private GameObject[] _VFXThirdSkill003Object;
+
     [SerializeField] private float _timeSetVFX = 0.4f;
 
 
@@ -149,5 +152,50 @@ public class VFXAxeSkillSlashControl : MonoBehaviour
     void SetVFXThirdAxeSkill002Slash2ActiveFalse()
     {
         _VFXThirdSkill002Object[1].SetActive(false);
+    }
+
+    // Skill 002
+    void SetVFXSecondAxeSkill003Slash1ActiveTrue()
+    {
+        _VFXSecondSkill003Object[0].SetActive(true);
+        Invoke(nameof(SetVFXSecondAxeSkill003Slash1ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXSecondAxeSkill003Slash1ActiveFalse()
+    {
+        _VFXSecondSkill003Object[0].SetActive(false);
+    }
+
+    void SetVFXSecondAxeSkill003Slash2ActiveTrue()
+    {
+        _VFXSecondSkill003Object[1].SetActive(true);
+        Invoke(nameof(SetVFXSecondAxeSkill003Slash2ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXSecondAxeSkill003Slash2ActiveFalse()
+    {
+        _VFXSecondSkill003Object[1].SetActive(false);
+    }
+
+    void SetVFXSecondAxeSkill003Slash3ActiveTrue()
+    {
+        _VFXSecondSkill003Object[2].SetActive(true);
+        Invoke(nameof(SetVFXSecondAxeSkill003Slash3ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXSecondAxeSkill003Slash3ActiveFalse()
+    {
+        _VFXSecondSkill003Object[2].SetActive(false);
+    }
+
+    void SetVFXThirdAxeSkill003ActiveTrue()
+    {
+        _VFXThirdSkill003Object[0].SetActive(true);
+        Invoke(nameof(SetVFXThirdAxeSkill003ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXThirdAxeSkill003ActiveFalse()
+    {
+        _VFXThirdSkill003Object[0].SetActive(false);
     }
 }

@@ -903,7 +903,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": true,
+            "IsUsing": false,
             "Level": 4,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -960,8 +960,8 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
-            "IsUsing": false,
+            "IsUnlocked": true,
+            "IsUsing": true,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -1057,7 +1057,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": true,
+            "IsUsing": false,
             "Level": 4,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -1104,8 +1104,8 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
-            "IsUsing": false,
+            "IsUnlocked": true,
+            "IsUsing": true,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
