@@ -42,46 +42,46 @@ public class VFXAxeSkillSlashControl : MonoBehaviour
         _VFXFirstSkill001Object[0].SetActive(false);
     }
 
-    void SetVFXSecondSkill001Slash1ActiveTrue()
+    void SetVFXSecondAxeSkill001Slash1ActiveTrue()
     {
         _VFXSecondSkill001Object[0].SetActive(true);
-        Invoke(nameof(SetVFXSecondSkill001Slash1ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXSecondAxeSkill001Slash1ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXSecondSkill001Slash1ActiveFalse()
+    void SetVFXSecondAxeSkill001Slash1ActiveFalse()
     {
         _VFXSecondSkill001Object[0].SetActive(false);
     }
 
-    void SetVFXSecondSkill001Slash2ActiveTrue()
+    void SetVFXSecondAxeSkill001Slash2ActiveTrue()
     {
         _VFXSecondSkill001Object[1].SetActive(true);
-        Invoke(nameof(SetVFXSecondSkill001Slash2ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXSecondAxeSkill001Slash2ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXSecondSkill001Slash2ActiveFalse()
+    void SetVFXSecondAxeSkill001Slash2ActiveFalse()
     {
         _VFXSecondSkill001Object[1].SetActive(false);
     }
 
-    void SetVFXSecondSkill001Slash3ActiveTrue()
+    void SetVFXSecondAxeSkill001Slash3ActiveTrue()
     {
         _VFXSecondSkill001Object[2].SetActive(true);
-        Invoke(nameof(SetVFXSecondSkill001Slash3ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXSecondAxeSkill001Slash3ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXSecondSkill001Slash3ActiveFalse()
+    void SetVFXSecondAxeSkill001Slash3ActiveFalse()
     {
         _VFXSecondSkill001Object[2].SetActive(false);
     }
 
-    void SetVFXThirdSkill001ActiveTrue()
+    void SetVFXThirdAxeSkill001ActiveTrue()
     {
         _VFXThirdSkill001Object[0].SetActive(true);
-        Invoke(nameof(SetVFXThirdSkill001ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXThirdAxeSkill001ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXThirdSkill001ActiveFalse()
+    void SetVFXThirdAxeSkill001ActiveFalse()
     {
         _VFXThirdSkill001Object[0].SetActive(false);
     }
