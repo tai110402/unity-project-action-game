@@ -10,78 +10,78 @@ public class VFXSwordSkillSlashControl : MonoBehaviour
     [SerializeField] private GameObject[] _VFXThirdSkill001Object;
     [SerializeField] private float _timeSetVFX=  0.4f;
 
-    void SetVFXFirstNormalSkillActiveTrue()
+    void SetVFXFirstNormalSwordSkillActiveTrue()
     {
         _VFXNormalSkillObject[0].SetActive(true);
-        Invoke(nameof(SetVFXFirstNormalSkillActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXFirstNormalSwordSkillActiveFalse), _timeSetVFX);
     }
-    void SetVFXFirstNormalSkillActiveFalse()
+    void SetVFXFirstNormalSwordSkillActiveFalse()
     {
         _VFXNormalSkillObject[0].SetActive(false);
     }
 
-    void SetVFXSecondNormalSkillActiveTrue()
+    void SetVFXSecondNormalSwordSkillActiveTrue()
     {
         _VFXNormalSkillObject[1].SetActive(true);
-        Invoke(nameof(SetVFXSecondNormalSkillActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXSecondNormalSwordSkillActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXSecondNormalSkillActiveFalse()
+    void SetVFXSecondNormalSwordSkillActiveFalse()
     {
         _VFXNormalSkillObject[1].SetActive(false);
     }
 
-    void SetVFXFirstSkill001ActiveTrue()
+    void SetVFXFirstSwordSkill001ActiveTrue()
     {
         _VFXFirstSkill001Object[0].SetActive(true);
-        Invoke(nameof(SetVFXFirstSkill001ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXFirstSwordSkill001ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXFirstSkill001ActiveFalse()
+    void SetVFXFirstSwordSkill001ActiveFalse()
     {
         _VFXFirstSkill001Object[0].SetActive(false);
     }
 
-    void SetVFXSecondSkill001Slash1ActiveTrue()
+    void SetVFXSecondSwordSkill001Slash1ActiveTrue()
     {
         _VFXSecondSkill001Object[0].SetActive(true);
-        Invoke(nameof(SetVFXSecondSkill001Slash1ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXSecondSwordSkill001Slash1ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXSecondSkill001Slash1ActiveFalse()
+    void SetVFXSecondSwordSkill001Slash1ActiveFalse()
     {
         _VFXSecondSkill001Object[0].SetActive(false);
     }
 
-    void SetVFXSecondSkill001Slash2ActiveTrue()
+    void SetVFXSecondSwordSkill001Slash2ActiveTrue()
     {
         _VFXSecondSkill001Object[1].SetActive(true);
-        Invoke(nameof(SetVFXSecondSkill001Slash2ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXSecondSwordSkill001Slash2ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXSecondSkill001Slash2ActiveFalse()
+    void SetVFXSecondSwordSkill001Slash2ActiveFalse()
     {
         _VFXSecondSkill001Object[1].SetActive(false);
     }
 
-    void SetVFXSecondSkill001Slash3ActiveTrue()
+    void SetVFXSecondSwordSkill001Slash3ActiveTrue()
     {
         _VFXSecondSkill001Object[2].SetActive(true);
-        Invoke(nameof(SetVFXSecondSkill001Slash3ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXSecondSwordSkill001Slash3ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXSecondSkill001Slash3ActiveFalse()
+    void SetVFXSecondSwordSkill001Slash3ActiveFalse()
     {
         _VFXSecondSkill001Object[2].SetActive(false);
     }
 
-    void SetVFXThirdSkill001ActiveTrue()
+    void SetVFXThirdSwordSkill001ActiveTrue()
     {
         _VFXThirdSkill001Object[0].SetActive(true);
-        Invoke(nameof(SetVFXThirdSkill001ActiveFalse), _timeSetVFX);
+        Invoke(nameof(SetVFXThirdSwordSkill001ActiveFalse), _timeSetVFX);
     }
 
-    void SetVFXThirdSkill001ActiveFalse()
+    void SetVFXThirdSwordSkill001ActiveFalse()
     {
         _VFXThirdSkill001Object[0].SetActive(false);
     }
