@@ -31,9 +31,6 @@
             "m_Id": "3dfbff83a3d943179cb4962916910ce9"
         },
         {
-            "m_Id": "cfb97073b58a4cfda877a526b1fab26d"
-        },
-        {
             "m_Id": "0776fdd495d149188650ec920fcfb0be"
         },
         {
@@ -175,7 +172,7 @@
                 "m_Node": {
                     "m_Id": "b2d5cd13db654f07814b21602ad54fcd"
                 },
-                "m_SlotId": 1
+                "m_SlotId": 4
             },
             "m_InputSlot": {
                 "m_Node": {
@@ -231,9 +228,6 @@
             },
             {
                 "m_Id": "43fc6dc42be645ebb4f84dd4deb4bfc7"
-            },
-            {
-                "m_Id": "cfb97073b58a4cfda877a526b1fab26d"
             }
         ]
     },
@@ -997,7 +991,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"91c8752e1aafe87449e739f29e78b9bd\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"3a32a156eb2bc514e9983de4f278935d\",\"type\":3}}",
         "m_Guid": ""
     },
     "m_Modifiable": true,
@@ -1610,39 +1604,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "cfb97073b58a4cfda877a526b1fab26d",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Emission",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "d1d8a5479d9d4ed1ba5df8fc833bc982"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Emission"
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "d018039028fd4cd7a460122e09592ad5",
     "m_Id": 0,
@@ -1652,36 +1613,6 @@
     "m_ShaderOutputName": "Out",
     "m_StageCapability": 3,
     "m_BareResource": false
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.ColorRGBMaterialSlot",
-    "m_ObjectId": "d1d8a5479d9d4ed1ba5df8fc833bc982",
-    "m_Id": 0,
-    "m_DisplayName": "Emission",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Emission",
-    "m_StageCapability": 2,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_Labels": [],
-    "m_ColorMode": 1,
-    "m_DefaultColor": {
-        "r": 0.0,
-        "g": 0.0,
-        "b": 0.0,
-        "a": 1.0
-    }
 }
 
 {
