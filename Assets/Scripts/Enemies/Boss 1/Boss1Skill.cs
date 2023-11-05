@@ -41,7 +41,7 @@ public class Boss1Skill : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-            StartCoroutine(FirstSkill());
+            StartCoroutine(DefaultRangeSkill());
         }
     }
 
@@ -72,16 +72,6 @@ public class Boss1Skill : MonoBehaviour
         transform.forward = (_targetTransform.position - transform.position).normalized;
         _boss1Animator.CrossFade("FirstSkill", 0f);
         yield return new WaitForSeconds(0.4f);
-
-        if (Time.time - _firstSkillStartTime > _firstSkillCooldownTime)
-        {
-            _firstSkillStartTime = Time.time;
-
-            var projectile = Instantiate(_firstSkillProjectile, _firstSkillSpawnPoint.position, _firstSkillSpawnPoint.rotation);
-
-            Vector3 direction = (_targetTransform.position - _firstSkillSpawnPoint.position).normalized;
-            projectile.GetComponent<Rigidbody>().velocity = direction * _firstSkillSpeed;
-        }
     }
 
     // Skill Ultimate, active intrinsic
@@ -105,8 +95,20 @@ public class Boss1Skill : MonoBehaviour
         _boss1Animator.CrossFade("DefaultMeleeSkill", 0f);
     }
 
-    private void DefaultRangeSkill()
+    IEnumerator DefaultRangeSkill()
     {
+        transform.forward = (_targetTransform.position - transform.position).normalized;
         _boss1Animator.CrossFade("DefaultRangeSkill", 0f);
+        yield return new WaitForSeconds(0.4f);
+
+        if (Time.time - _firstSkillStartTime > _firstSkillCooldownTime)
+        {
+            _firstSkillStartTime = Time.time;
+
+            var projectile = Instantiate(_firstSkillProjectile, _firstSkillSpawnPoint.position, _firstSkillSpawnPoint.rotation);
+
+            Vector3 direction = (_targetTransform.position - _firstSkillSpawnPoint.position).normalized;
+            projectile.GetComponent<Rigidbody>().velocity = direction * _firstSkillSpeed;
+        }
     }
 }
