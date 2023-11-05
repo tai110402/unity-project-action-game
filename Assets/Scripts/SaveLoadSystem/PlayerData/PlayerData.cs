@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public int HP;
+    public int MaxHP;
+    public int CurrentHP;
     public Vector3 Position;
     public Quaternion Quaternion;
     public int Gold;
