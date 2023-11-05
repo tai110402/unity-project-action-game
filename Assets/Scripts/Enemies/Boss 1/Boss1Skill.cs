@@ -12,6 +12,7 @@ public class Boss1Skill : MonoBehaviour
     [SerializeField] private GameObject _intrinsic;
     [SerializeField] private float _intrinsicCooldownTime = 2f;
     [SerializeField] private int _maxNumberOfIntrinsic = 7;
+    [SerializeField] private int _intrinsicDamage = 3;
     private float _intrinsicSkillStartTime;
     private List<GameObject> _intrinsicList = new List<GameObject>();
 
@@ -93,6 +94,7 @@ public class Boss1Skill : MonoBehaviour
         foreach (GameObject gameObject in _intrinsicList)
         {
             gameObject.GetComponent<Boss1Intrinsic>().ActiveIntrinsicSkill();
+            gameObject.GetComponent<EnemyDamageObject>().Damage = _intrinsicDamage;
         }
         _intrinsicList.Clear();
         _intrinsicSkillStartTime = Time.time;

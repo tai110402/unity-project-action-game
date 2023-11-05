@@ -6966,9 +6966,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetTransform: {fileID: 955255662}
   _boss1Animator: {fileID: 1635077928}
-  _intrinsic: {fileID: 6155973814212065043, guid: d8c0fae7ee4e4b248a0201ba25243d84, type: 3}
+  _intrinsic: {fileID: 8824143222584171977, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
   _intrinsicCooldownTime: 2
   _maxNumberOfIntrinsic: 7
+  _intrinsicDamage: 3
   _firstSkillProjectile: {fileID: 8612937557791225377, guid: d4545a4a3c3e7dd47b6e962472d41bae, type: 3}
   _firstSkillSpawnPoint: {fileID: 2074578201}
   _firstSkillCooldownTime: 1
@@ -8976,6 +8977,63 @@ MonoBehaviour:
   _shaderVarRef: Vector1_80588453a08b415887b8e695e3e324e9
   _shaderVarRate: 0.1
   _shaderVarRefreshRate: 0.05
+--- !u!1001 &649103452429335552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.937
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102262455155363046, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824143222584171977, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
+      propertyPath: m_Name
+      value: Boss1-Intrinsic-VFX-V1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aab1505dd26c5b24bba3ec069041f003, type: 3}
 --- !u!4 &822416212521659833
 Transform:
   m_ObjectHideFlags: 0

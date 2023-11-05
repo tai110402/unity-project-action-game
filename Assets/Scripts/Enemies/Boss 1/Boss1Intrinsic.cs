@@ -6,12 +6,24 @@ public class Boss1Intrinsic : MonoBehaviour
 {
     private Vector3 _playerPosition;
     private Vector3 _spawnPoint;
+    private float _timeSpawn;
+    [SerializeField] private float _lifeTime = 20f;
 
     // Start is called before the first frame update
     void Start()
     {
         _spawnPoint = transform.position;
+        _timeSpawn = Time.time;
         _playerPosition = GameObject.FindWithTag("Player").transform.position + new Vector3(0f, 0.8f, 0f);
+    }
+
+    private void Update()
+    {
+        if (Time.time - _timeSpawn > _lifeTime)
+        {
+            GameObject.Destroy(gameObject);
+            Debug.Log("time destou");
+        }
     }
 
     public void ActiveIntrinsicSkill()
@@ -29,6 +41,7 @@ public class Boss1Intrinsic : MonoBehaviour
         while (t <= 1f)
         {
             transform.position = Evaluate(t, c);
+            transform.up = Evaluate(t + 0.001f, c) - transform.position;
             t += 0.02f;
             yield return new WaitForSeconds(0.01f);
         }

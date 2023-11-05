@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDamageObject : MonoBehaviour
 {
     [SerializeField] private int _damage = 3;
+    public int Damage { set { _damage = value; } get { return _damage; } }
 
     private void OnTriggerEnter(Collider other)
     {
