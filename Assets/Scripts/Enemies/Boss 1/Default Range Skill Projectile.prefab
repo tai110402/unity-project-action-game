@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4009117012369538049}
   - component: {fileID: -5677900368321202740}
   m_Layer: 0
-  m_Name: First Skill Projectile
+  m_Name: Default Range Skill Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

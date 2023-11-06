@@ -8,7 +8,7 @@ public class Boss1Skill : MonoBehaviour
     [SerializeField] private Transform _targetTransform;
     [SerializeField] private Animator _boss1Animator;
 
-    // Intrinsic
+    // Intrinsic <=> Skill 2
     [SerializeField] private GameObject _intrinsic;
     [SerializeField] private float _intrinsicCooldownTime = 2f;
     [SerializeField] private int _maxNumberOfIntrinsic = 7;
@@ -16,12 +16,18 @@ public class Boss1Skill : MonoBehaviour
     private float _intrinsicSkillStartTime;
     private List<GameObject> _intrinsicList = new List<GameObject>();
 
+    // DefaultRangeSkill
+    [SerializeField] private GameObject _defaultRangeSkillProjectile;
+    [SerializeField] private Transform _defaultRangeSkillSpawnPoint;
+    [SerializeField] private float _defaultRangeSkillCooldownTime = 3f;
+    [SerializeField] private float _defaultRangeSkillSpeed = 3f;
+    private float _defaultRangeSkillStartTime;
+
     // Skill 1
-    [SerializeField] private GameObject _firstSkillProjectile;
-    [SerializeField] private Transform _firstSkillSpawnPoint;
-    [SerializeField] private float _firstSkillCooldownTime = 3f;
-    [SerializeField] private float _firstSkillSpeed = 3f;
-    private float _firstSkillStartTime;
+    [SerializeField] private GameObject _firstSkillVFX;
+    [SerializeField] private float _firstSkillDuration = 10f;
+    [SerializeField] private float _firstSkillCooldownTime = 20f;
+    private float _firstSkillStartTime = -1000f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +48,11 @@ public class Boss1Skill : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B))
         {
             StartCoroutine(DefaultRangeSkill());
+        }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            StartCoroutine(FirstSkill());
         }
     }
 
@@ -69,9 +80,17 @@ public class Boss1Skill : MonoBehaviour
     // Skill 1
     IEnumerator FirstSkill()
     {
-        transform.forward = (_targetTransform.position - transform.position).normalized;
-        _boss1Animator.CrossFade("FirstSkill", 0f);
-        yield return new WaitForSeconds(0.4f);
+        if (Time.time - _firstSkillStartTime > _firstSkillCooldownTime)
+        {
+            _firstSkillStartTime = Time.time;
+            transform.forward = (_targetTransform.position - transform.position).normalized;
+            _boss1Animator.CrossFade("FirstSkill", 0f);
+            yield return new WaitForSeconds(1f);
+            _firstSkillVFX.SetActive(true);
+            yield return new WaitForSeconds(_firstSkillDuration);
+            _firstSkillVFX.SetActive(false);
+        }
+
     }
 
     // Skill Ultimate, active intrinsic
@@ -97,18 +116,17 @@ public class Boss1Skill : MonoBehaviour
 
     IEnumerator DefaultRangeSkill()
     {
-        transform.forward = (_targetTransform.position - transform.position).normalized;
-        _boss1Animator.CrossFade("DefaultRangeSkill", 0f);
-        yield return new WaitForSeconds(0.4f);
-
-        if (Time.time - _firstSkillStartTime > _firstSkillCooldownTime)
+        if (Time.time - _defaultRangeSkillStartTime > _defaultRangeSkillCooldownTime)
         {
-            _firstSkillStartTime = Time.time;
+            transform.forward = (_targetTransform.position - transform.position).normalized;
+            _boss1Animator.CrossFade("DefaultRangeSkill", 0f);
+            yield return new WaitForSeconds(0.4f);
+            _defaultRangeSkillStartTime = Time.time;
 
-            var projectile = Instantiate(_firstSkillProjectile, _firstSkillSpawnPoint.position, _firstSkillSpawnPoint.rotation);
+            var projectile = Instantiate(_defaultRangeSkillProjectile, _defaultRangeSkillSpawnPoint.position, _defaultRangeSkillSpawnPoint.rotation);
 
-            Vector3 direction = (_targetTransform.position - _firstSkillSpawnPoint.position).normalized;
-            projectile.GetComponent<Rigidbody>().velocity = direction * _firstSkillSpeed;
+            Vector3 direction = (_targetTransform.position - _defaultRangeSkillSpawnPoint.position).normalized;
+            projectile.GetComponent<Rigidbody>().velocity = direction * _defaultRangeSkillSpeed;
         }
     }
 }

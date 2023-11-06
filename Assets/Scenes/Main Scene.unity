@@ -848,7 +848,7 @@ Transform:
   m_Children:
   - {fileID: 1635077926}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217005580
 GameObject:
@@ -4436,7 +4436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!73398921 &1080280143
 VFXRenderer:
   serializedVersion: 1
@@ -4445,7 +4445,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080280142}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4520,12 +4520,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080280142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.2, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102091478
 GameObject:
@@ -6970,10 +6970,13 @@ MonoBehaviour:
   _intrinsicCooldownTime: 2
   _maxNumberOfIntrinsic: 7
   _intrinsicDamage: 3
-  _firstSkillProjectile: {fileID: 8612937557791225377, guid: d4545a4a3c3e7dd47b6e962472d41bae, type: 3}
-  _firstSkillSpawnPoint: {fileID: 2074578201}
-  _firstSkillCooldownTime: 1
-  _firstSkillSpeed: 20
+  _defaultRangeSkillProjectile: {fileID: 8612937557791225377, guid: d4545a4a3c3e7dd47b6e962472d41bae, type: 3}
+  _defaultRangeSkillSpawnPoint: {fileID: 2074578201}
+  _defaultRangeSkillCooldownTime: 3
+  _defaultRangeSkillSpeed: 3
+  _firstSkillVFX: {fileID: 1080280142}
+  _firstSkillDuration: 10
+  _firstSkillCooldownTime: 20
 --- !u!95 &1635077928 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 21a9fb67f36ef2e40942b70c205c0d55, type: 3}
