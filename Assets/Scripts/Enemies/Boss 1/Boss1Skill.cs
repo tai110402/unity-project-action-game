@@ -8,7 +8,7 @@ public class Boss1Skill : MonoBehaviour
     [SerializeField] private Transform _targetTransform;
     [SerializeField] private Animator _boss1Animator;
 
-    // Intrinsic <=> Skill 2
+    // Intrinsic <=> Skill 3
     [SerializeField] private GameObject _intrinsic;
     [SerializeField] private float _intrinsicCooldownTime = 2f;
     [SerializeField] private int _maxNumberOfIntrinsic = 7;
@@ -29,6 +29,11 @@ public class Boss1Skill : MonoBehaviour
     [SerializeField] private float _firstSkillCooldownTime = 20f;
     private float _firstSkillStartTime = -1000f;
 
+    // Skill 2
+    [SerializeField] private GameObject _secondSkillVFX;
+    [SerializeField] private float _secondSkillCooldownTime = 10f;
+    private float _secondSkillStartTime = -1000f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +47,7 @@ public class Boss1Skill : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            StartCoroutine(SecondSkill());
+            StartCoroutine(ThirdSkill());
         }
 
         if (Input.GetKeyDown(KeyCode.B))
@@ -53,6 +58,11 @@ public class Boss1Skill : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             StartCoroutine(FirstSkill());
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            StartCoroutine(SecondSkill());
         }
     }
 
@@ -83,7 +93,8 @@ public class Boss1Skill : MonoBehaviour
         if (Time.time - _firstSkillStartTime > _firstSkillCooldownTime)
         {
             _firstSkillStartTime = Time.time;
-            transform.forward = (_targetTransform.position - transform.position).normalized;
+            Vector3 temp = (_targetTransform.position - transform.position).normalized;
+            transform.forward = new Vector3(temp.x, 0f, temp.z);
             _boss1Animator.CrossFade("FirstSkill", 0f);
             yield return new WaitForSeconds(1f);
             _firstSkillVFX.SetActive(true);
@@ -93,12 +104,30 @@ public class Boss1Skill : MonoBehaviour
 
     }
 
-    // Skill Ultimate, active intrinsic
+    // Skill 2
     IEnumerator SecondSkill()
     {
-        transform.forward = (_targetTransform.position - transform.position).normalized;
+        if (Time.time - _secondSkillStartTime > _secondSkillCooldownTime)
+        {
+            Vector3 temp = (_targetTransform.position - transform.position).normalized;
+            transform.forward = new Vector3(temp.x, 0f, temp.z);
+            _boss1Animator.CrossFade("SecondSkill", 0f);
+            yield return new WaitForSeconds(0.7f);
+            _secondSkillStartTime = Time.time;
 
-        _boss1Animator.CrossFade("SecondSkill", 0f);
+            _secondSkillVFX.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            _secondSkillVFX.SetActive(false);
+        }
+    }
+
+    // Skill Ultimate, active intrinsic
+    IEnumerator ThirdSkill()
+    {
+        Vector3 temp = (_targetTransform.position - transform.position).normalized;
+        transform.forward = new Vector3(temp.x, 0f, temp.z);
+
+        _boss1Animator.CrossFade("ThirdSkill", 0f);
         yield return new WaitForSeconds(1.2f);
         foreach (GameObject gameObject in _intrinsicList)
         {
@@ -118,7 +147,8 @@ public class Boss1Skill : MonoBehaviour
     {
         if (Time.time - _defaultRangeSkillStartTime > _defaultRangeSkillCooldownTime)
         {
-            transform.forward = (_targetTransform.position - transform.position).normalized;
+            Vector3 temp = (_targetTransform.position - transform.position).normalized;
+            transform.forward = new Vector3(temp.x, 0f, temp.z);
             _boss1Animator.CrossFade("DefaultRangeSkill", 0f);
             yield return new WaitForSeconds(0.4f);
             _defaultRangeSkillStartTime = Time.time;
