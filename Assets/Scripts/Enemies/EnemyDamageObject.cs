@@ -13,6 +13,10 @@ public class EnemyDamageObject : MonoBehaviour
         {
             RuntimePlayerData.PlayerData.CurrentHP -= _damage;
             Debug.Log("damge");
+            GameObject playerGameObject = GameObject.FindWithTag("Player");
+            Animator x = playerGameObject.GetComponent<Animator>();
+            x.CrossFade("GetHit", 0f);
+            playerGameObject.GetComponent<PlayerGetHit>().HitDirection = playerGameObject.transform.position - transform.position;
         }
     }
 }

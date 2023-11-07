@@ -64,7 +64,6 @@ public class Boss1Intrinsic : MonoBehaviour
             Transform VFX = transform.GetChild(0);
             VFX.gameObject.SetActive(true);
             GameObject.Destroy(gameObject, 0.1f);
-            Debug.Log("destroy");
         }
     }
 }
