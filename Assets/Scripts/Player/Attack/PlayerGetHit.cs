@@ -24,7 +24,7 @@ public class PlayerGetHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetHit"))
+        if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetStrongHit") || _playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetHit"))
         {
             _playerMovementManagement.enabled = false;
             _playerWeaponManagement.enabled = false;
@@ -35,10 +35,10 @@ public class PlayerGetHit : MonoBehaviour
             _playerWeaponManagement.enabled = true;
         }
 
-        if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetHit"))
+        if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetStrongHit") || _playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetHit"))
         {
             _characterController.Move(_hitDirection * 5 * Time.deltaTime);
-            transform.forward = -_hitDirection;
+            //transform.forward = -_hitDirection;
         }
     }
 }

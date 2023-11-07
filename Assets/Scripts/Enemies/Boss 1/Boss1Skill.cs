@@ -131,8 +131,9 @@ public class Boss1Skill : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
         foreach (GameObject gameObject in _intrinsicList)
         {
-            gameObject.GetComponent<Boss1Intrinsic>().ActiveIntrinsicSkill();
             gameObject.GetComponent<EnemyDamageObject>().Damage = _intrinsicDamage;
+            gameObject.GetComponent<EnemyDamageObject>().TurnOnGetHitAnimation = true;
+            gameObject.GetComponent<Boss1Intrinsic>().ActiveIntrinsicSkill();
         }
         _intrinsicList.Clear();
         _intrinsicSkillStartTime = Time.time;

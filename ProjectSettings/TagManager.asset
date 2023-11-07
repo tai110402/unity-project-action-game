@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerBox
+  - Boss1
   layers:
   - Default
   - TransparentFX
