@@ -6,6 +6,8 @@ public class Mainmenu : MonoBehaviour
 {
     [SerializeField] private GameObject _mainMenuObject;
     [SerializeField] private CameraController _cameraController;
+    [SerializeField] private PlayerMovementManagement _playerMovementManagement;
+    [SerializeField] private PlayerWeaponManagement _playerWeaponManagement;
 
     private bool _isMainMenuDisplay;
     // Start is called before the first frame update
@@ -26,6 +28,9 @@ public class Mainmenu : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 _isMainMenuDisplay = true;
+
+                _playerMovementManagement.enabled = false;
+                _playerWeaponManagement.enabled = false;
             }
             else
             {
@@ -34,6 +39,9 @@ public class Mainmenu : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 _isMainMenuDisplay = false;
+
+                _playerMovementManagement.enabled = true;
+                _playerWeaponManagement.enabled = true;
             }
         }
     }

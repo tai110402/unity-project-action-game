@@ -28,10 +28,19 @@ public class PlayerWeaponManagement : MonoBehaviour
     private void Awake()
     {
         _playerInputActions = new PlayerInputActions();
-        _playerInputActions.AttackManagement.Enable();
 
         _playerAnimator = GetComponent<Animator>();
         _isUnequip = true;
+    }
+
+    private void OnEnable()
+    {
+        _playerInputActions.AttackManagement.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _playerInputActions.AttackManagement.Disable();
     }
 
     // Start is called before the first frame update

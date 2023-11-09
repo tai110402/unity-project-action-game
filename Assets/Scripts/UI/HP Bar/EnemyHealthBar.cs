@@ -7,7 +7,7 @@ public class EnemyHealthBar : MonoBehaviour
 {
     [SerializeField] private Transform _healthBarCanvas;
     private Image _healthBarSprite;
-    private DamageableObject _damageableObject;
+    [SerializeField] private DamageableObject _damageableObject;
 
     private Camera _cam;
 

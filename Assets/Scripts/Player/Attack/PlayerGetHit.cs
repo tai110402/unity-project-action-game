@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerGetHit : MonoBehaviour
 {
+    [SerializeField] private GameObject _mainMenuUI;
     private Animator _playerAnimator;
     private CharacterController _characterController;
     private PlayerWeaponManagement _playerWeaponManagement;
@@ -22,17 +23,23 @@ public class PlayerGetHit : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetStrongHit") || _playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetHit"))
         {
-            _playerMovementManagement.enabled = false;
-            _playerWeaponManagement.enabled = false;
+            if (_mainMenuUI.activeSelf == false)
+            {
+                _playerMovementManagement.enabled = false;
+                _playerWeaponManagement.enabled = false;
+            }
         }
         else
         {
-            _playerMovementManagement.enabled = true;
-            _playerWeaponManagement.enabled = true;
+            if (_mainMenuUI.activeSelf == false)
+            {
+                _playerMovementManagement.enabled = true;
+                _playerWeaponManagement.enabled = true;
+            }
         }
 
         if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetStrongHit") || _playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetHit"))
