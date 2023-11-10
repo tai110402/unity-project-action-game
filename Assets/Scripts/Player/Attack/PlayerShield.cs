@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class PlayerShield : MonoBehaviour
 {
-    //[SerializeField] private float _blockTime;
-
+    [SerializeField] private GameObject _shieldGameObject;
     private Animator _playerAnimator;
-
     private Skill _blockSkill;
     private float _blockSkillStartTime = -1000f;
 
@@ -19,12 +17,6 @@ public class PlayerShield : MonoBehaviour
         _playerAnimator = GetComponent<Animator>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +26,21 @@ public class PlayerShield : MonoBehaviour
             if (skillArray[i].AnimationName.Contains("DefaultBlockSkill"))
             {
                 _blockSkill = skillArray[i];
+            }
+        }
+
+        if (_blockSkill != null)
+        {
+            for (int i = 0; i < _playerAnimator.layerCount; i++)
+            {
+                if (_playerAnimator.GetCurrentAnimatorStateInfo(i).IsName(_blockSkill.AnimationName))
+                {
+                    _shieldGameObject.SetActive(true);
+                }
+                else
+                {
+                    _shieldGameObject.SetActive(false);
+                }
             }
         }
     }

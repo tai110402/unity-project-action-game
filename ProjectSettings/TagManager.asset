@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerBox
   - Boss1
+  - EnemySkill
   layers:
   - Default
   - TransparentFX

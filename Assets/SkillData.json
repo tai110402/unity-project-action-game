@@ -37,7 +37,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": false,
+            "IsUsing": true,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [

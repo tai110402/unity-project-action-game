@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 2612854016631584716}
   m_Layer: 0
   m_Name: Boss1-Intrinsic-VFX-V1
-  m_TagString: Untagged
+  m_TagString: EnemySkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +232,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8596067766787929856
 Rigidbody:
@@ -278,3 +278,4 @@ MonoBehaviour:
   _damage: 1
   _enemyGameObjectName: Boss1
   _playerGetHitAnimationName: GetStrongHit
+  _turnOnGetHitAnimation: 0
