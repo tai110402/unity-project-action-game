@@ -26,6 +26,7 @@ public class LearningNewSkill : MonoBehaviour
             dict[_newSkillName].IsUnlocked = true;
             dict[_newSkillName].IsUsing = _isUsing;
             Debug.Log("Learning Compeletely" + ", IsUsing: " + _isUsing + ", Skill Name: " + _newSkillName);
+            gameObject.SetActive(false);
         }
     }
 }
