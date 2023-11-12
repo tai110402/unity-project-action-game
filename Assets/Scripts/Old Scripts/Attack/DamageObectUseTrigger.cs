@@ -12,20 +12,31 @@ public class DamageObectUseTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         DamageableObject damgeableObject = other.GetComponent<DamageableObject>();
+        Animator enemyAnimator = other.GetComponent<Animator>();
 
-        if (damgeableObject != null)
+        if (other.gameObject.tag.Contains("Enemy") || other.gameObject.tag.Contains("Boss"))
         {
-            Skill skill = RuntimeSkillData.SkillDictionary[_skillName];
-            float skillDamage = skill.SlashArray[skill.Level - 1].Slash[_indexOfSlash];
+            if (enemyAnimator != null)
+            {
+                enemyAnimator.CrossFade("EnemyGetHit", 0f);
+            }
 
-            WeaponData weaponData = RuntimeEquipmentData.EquipmentData.WeaponDataArray[_indexOfWeapon];
-            int weaponDamage = weaponData.Damage[weaponData.Level - 1];
+            if (damgeableObject != null)
+            {
+                Skill skill = RuntimeSkillData.SkillDictionary[_skillName];
+                float skillDamage = skill.SlashArray[skill.Level - 1].Slash[_indexOfSlash];
 
-            _damage = (int)(skillDamage * weaponDamage);
+                WeaponData weaponData = RuntimeEquipmentData.EquipmentData.WeaponDataArray[_indexOfWeapon];
+                int weaponDamage = weaponData.Damage[weaponData.Level - 1];
 
-            damgeableObject.Damage(_damage);
+                _damage = (int)(skillDamage * weaponDamage);
 
-            Debug.Log("He so Skill: " + skillDamage + ", WeaponDamage: " + weaponDamage);
+                damgeableObject.Damage(_damage);
+
+                Debug.Log("He so Skill: " + skillDamage + ", WeaponDamage: " + weaponDamage);
+            }
         }
+
+        
     }
 }
