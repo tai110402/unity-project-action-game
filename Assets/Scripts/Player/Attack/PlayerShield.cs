@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShield : MonoBehaviour
 {
     [SerializeField] private GameObject _shieldGameObject;
+    [SerializeField] private GameObject _shieldColliderGameObject;
     private Animator _playerAnimator;
     private Skill _blockSkill;
     private float _blockSkillStartTime = -1000f;
@@ -51,6 +52,8 @@ public class PlayerShield : MonoBehaviour
 
         if (Time.time - blockStartTime > blockSkill.TimeCoolDown[blockSkill.Level-1])
         {
+            StartCoroutine(ShieldColliderControl());
+            
             blockStartTime = Time.time;
             for (int i = 0; i < _playerAnimator.layerCount; i++)
             {
@@ -58,5 +61,14 @@ public class PlayerShield : MonoBehaviour
             }
         }
         return blockStartTime;
+    }
+
+    IEnumerator ShieldColliderControl()
+    {
+        _shieldGameObject.SetActive(true);
+        _shieldColliderGameObject.SetActive(true);
+        yield return new WaitForSeconds(0.8f);
+        _shieldGameObject.SetActive(false);
+        _shieldColliderGameObject.SetActive(false);
     }
 }

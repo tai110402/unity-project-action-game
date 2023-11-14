@@ -16,6 +16,8 @@ public class Boss1Skill : MonoBehaviour
     private float _intrinsicSkillStartTime;
     private List<GameObject> _intrinsicList = new List<GameObject>();
 
+    public List<GameObject> IntrinsicList { get { return _intrinsicList; } }
+
     // DefaultRangeSkill
     [SerializeField] private GameObject _defaultRangeSkillProjectile;
     [SerializeField] private Transform _defaultRangeSkillSpawnPoint;
@@ -87,6 +89,21 @@ public class Boss1Skill : MonoBehaviour
         }
     }
 
+    public void FirstSkillEx()
+    {
+        StartCoroutine(FirstSkill());
+    }
+
+    public void SecondSkillEx()
+    {
+        StartCoroutine(SecondSkill());
+    }
+
+    public void ThirdSkillEx()
+    {
+        StartCoroutine(ThirdSkill());
+    }
+
     // Skill 1
     IEnumerator FirstSkill()
     {
@@ -96,7 +113,9 @@ public class Boss1Skill : MonoBehaviour
             Vector3 temp = (_targetTransform.position - transform.position).normalized;
             transform.forward = new Vector3(temp.x, 0f, temp.z);
             _boss1Animator.CrossFade("FirstSkill", 0f);
+            
             yield return new WaitForSeconds(1f);
+            _firstSkillVFX.transform.position = transform.position;
             _firstSkillVFX.SetActive(true);
             yield return new WaitForSeconds(_firstSkillDuration);
             _firstSkillVFX.SetActive(false);
@@ -113,11 +132,10 @@ public class Boss1Skill : MonoBehaviour
             transform.forward = new Vector3(temp.x, 0f, temp.z);
             _boss1Animator.CrossFade("SecondSkill", 0f);
             yield return new WaitForSeconds(0.7f);
-            _secondSkillStartTime = Time.time;
-
             _secondSkillVFX.SetActive(true);
             yield return new WaitForSeconds(1f);
             _secondSkillVFX.SetActive(false);
+            _secondSkillStartTime = Time.time;
         }
     }
 
