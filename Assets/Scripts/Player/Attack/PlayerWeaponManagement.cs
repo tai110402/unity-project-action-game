@@ -103,7 +103,7 @@ public class PlayerWeaponManagement : MonoBehaviour
             else if (_numberOfClicks == 2)
             {
                 CancelInvoke(nameof(WaitForCalculateNumberOfClicksForAxe));
-                _playerAxe.SecondSkillStartTime = _playerAxe.Attack(_playerAxe.SecondNormalSkill, _playerAxe.SecondNormalSkillStartTime);
+                _playerAxe.SecondNormalSkillStartTime = _playerAxe.Attack(_playerAxe.SecondNormalSkill, _playerAxe.SecondNormalSkillStartTime);
             }
         }
         else if (_isSwordEquip)
@@ -115,7 +115,7 @@ public class PlayerWeaponManagement : MonoBehaviour
             else if (_numberOfClicks == 2)
             {
                 CancelInvoke(nameof(WaitForCalculateNumberOfClicksForSword));
-                _playerSword.SecondSkillStartTime = _playerSword.Attack(_playerSword.SecondNormalSkill, _playerSword.SecondNormalSkillStartTime);
+                _playerSword.SecondNormalSkillStartTime = _playerSword.Attack(_playerSword.SecondNormalSkill, _playerSword.SecondNormalSkillStartTime);
             }
         }
     }

@@ -32,6 +32,6 @@ public class Boss1FirstAttack : ActionNode
             return State.Running;
         }
 
-        return State.Success;
+        return State.Failure;
     }
 }

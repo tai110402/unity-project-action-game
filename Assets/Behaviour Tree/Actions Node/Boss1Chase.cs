@@ -5,8 +5,8 @@ using TheKiwiCoder;
 
 public class Boss1Chase : ActionNode
 {
-    private float _minChaseDistance = 10f;
-    private float _maxChaseDistance = 20f;
+    public float _minChaseDistance = 10f;
+    public float _maxChaseDistance = 20f;
     private float _chaseSpeed = 4f;
 
     private GameObject _playerGameObject;
@@ -21,19 +21,17 @@ public class Boss1Chase : ActionNode
         _playerGameObject = GameObject.FindWithTag("Player");
 
         float distance = (_playerGameObject.transform.position - context.gameObject.transform.position).magnitude;
-        if (distance > _maxChaseDistance)
-        {
-            return State.Success;
-        } else if (_minChaseDistance <= distance && distance <= _maxChaseDistance)
+        if (_minChaseDistance <= distance && distance <= _maxChaseDistance)
         {
             context.agent.speed = _chaseSpeed;
             context.agent.SetDestination(_playerGameObject.transform.position);
-            return State.Running;
+            context.animator.CrossFade("Walk", 0f);
+            return State.Success;
         } else if (distance < _minChaseDistance)
         {
             context.agent.ResetPath();
             return State.Success;
         }
-        return State.Running;
+        return State.Success;
     }
 }

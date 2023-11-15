@@ -1,0 +1,453 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8248653473121785620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: d5341f624a912944086e27c8cb267df8
+  position: {x: -10.850023, y: 186.84999}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 577340495840942830}
+  - {fileID: 577340495840942830}
+  - {fileID: 577340495840942830}
+  - {fileID: 577340495840942830}
+  - {fileID: 577340495840942830}
+  - {fileID: -7666320708133480387}
+  - {fileID: -7666320708133480387}
+  - {fileID: -7666320708133480387}
+  - {fileID: -7666320708133480387}
+  - {fileID: -7666320708133480387}
+  - {fileID: 4832681157116432545}
+  - {fileID: 4832681157116432545}
+  - {fileID: 4832681157116432545}
+  - {fileID: 4832681157116432545}
+  - {fileID: 4832681157116432545}
+  - {fileID: 3911782714177754356}
+  - {fileID: 3911782714177754356}
+  - {fileID: 3911782714177754356}
+  - {fileID: 3911782714177754356}
+  - {fileID: 3911782714177754356}
+  - {fileID: 287280117577287076}
+  - {fileID: 287280117577287076}
+  - {fileID: 287280117577287076}
+  - {fileID: 287280117577287076}
+  - {fileID: 4581776827924550100}
+  - {fileID: 4581776827924550100}
+  - {fileID: 4581776827924550100}
+  - {fileID: 4581776827924550100}
+  - {fileID: -1197635284459095451}
+--- !u!114 &-7666320708133480387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: bf4adc91b23805f4399201ed24baf900
+  position: {x: -238.30005, y: 321.30002}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -1627791759677088827}
+  restartOnSuccess: 0
+  restartOnFailure: 0
+--- !u!114 &-6686333508947921477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdda85cca27b6bf479b941a0128549ce, type: 3}
+  m_Name: Boss1Chase
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 133561249ac11ef4e915478a61f5ddd7
+  position: {x: -81, y: 418}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  _minChaseDistance: 10
+  _maxChaseDistance: 20
+--- !u!114 &-6322966180727341075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961405d3ab3c70f4caf40a43a56127eb, type: 3}
+  m_Name: Boss1Attack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6d51523c29727b24e8f763553a259161
+  position: {x: 558.7001, y: 418.70007}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 1
+  _skillAnimationName: SecondSkill
+  _minDistance: 0
+  _maxDistance: 2
+  _thirdSkillCondition: 1
+--- !u!114 &-5223035262766624250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961405d3ab3c70f4caf40a43a56127eb, type: 3}
+  m_Name: Boss1Attack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 553d5adb2445498419b5ce8e8147f5b6
+  position: {x: 238, y: 420}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  _skillAnimationName: FirstSkill
+  _minDistance: 2
+  _maxDistance: 5
+  _thirdSkillCondition: 1
+--- !u!114 &-4538116576358507289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961405d3ab3c70f4caf40a43a56127eb, type: 3}
+  m_Name: Boss1Attack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6f9e4268b4919434ba52e86580db1294
+  position: {x: 401.15, y: 422.45013}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  _skillAnimationName: ThirdSkill
+  _minDistance: 2
+  _maxDistance: 10
+  _thirdSkillCondition: 3
+--- !u!114 &-4280313645164019360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 06f791651a14fef439d365f77883fd0e
+  position: {x: -10.160647, y: 89.270096}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -8248653473121785620}
+  restartOnSuccess: 1
+  restartOnFailure: 1
+--- !u!114 &-1627791759677088827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961405d3ab3c70f4caf40a43a56127eb, type: 3}
+  m_Name: Boss1Attack
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: aa9076f3a7fbf744bae8159339b825f0
+  position: {x: -236, y: 413}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  _skillAnimationName: ThirdSkill
+  _minDistance: 20
+  _maxDistance: 25
+  _thirdSkillCondition: 1
+--- !u!114 &-1197635284459095451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5f5dc4460bb284897c733743426d77, type: 3}
+  m_Name: Boss1Dodge
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5982ce50cbd17154d9cd9a5980dccb15
+  position: {x: 789.68207, y: 371.45004}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  _minDistance: 0
+  _maxDistance: 5
+  _speed: 2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: New Behaviour Tree
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 3789000893299369196}
+  treeState: 0
+  nodes:
+  - {fileID: 3789000893299369196}
+  - {fileID: -4280313645164019360}
+  - {fileID: -6686333508947921477}
+  - {fileID: -7666320708133480387}
+  - {fileID: 4832681157116432545}
+  - {fileID: -1627791759677088827}
+  - {fileID: 3911782714177754356}
+  - {fileID: -5223035262766624250}
+  - {fileID: -6322966180727341075}
+  - {fileID: 4581776827924550100}
+  - {fileID: -8248653473121785620}
+  - {fileID: 287280117577287076}
+  - {fileID: -4538116576358507289}
+  - {fileID: 577340495840942830}
+  - {fileID: 7318730307639381214}
+  - {fileID: -1197635284459095451}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &287280117577287076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ba35768cc6b9bb844b516e4c1d732f5f
+  position: {x: 400, y: 319}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -4538116576358507289}
+  restartOnSuccess: 0
+  restartOnFailure: 0
+--- !u!114 &577340495840942830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: b4d893f65d211d0478467eca680003fc
+  position: {x: -400.63998, y: 318}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: 7318730307639381214}
+  restartOnSuccess: 0
+  restartOnFailure: 0
+--- !u!114 &3789000893299369196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163c147d123e4a945b688eddc64e3ea5, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 45c612979d84c7a4c9e6d2319db08e8d
+  position: {x: -10.160647, y: -21.388}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -4280313645164019360}
+--- !u!114 &3911782714177754356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a655efd28ae174745b6d1907a90e845a
+  position: {x: 238, y: 320}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -5223035262766624250}
+  restartOnSuccess: 0
+  restartOnFailure: 0
+--- !u!114 &4581776827924550100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7d65dd2a56aa05d44965fc784020b2ef
+  position: {x: 559, y: 321}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -6322966180727341075}
+  restartOnSuccess: 0
+  restartOnFailure: 0
+--- !u!114 &4832681157116432545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 67a354c231b3ce242abb122ed8d5be2c
+  position: {x: -80, y: 320}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: -6686333508947921477}
+  restartOnSuccess: 0
+  restartOnFailure: 0
+--- !u!114 &5282370392669591498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5f5dc4460bb284897c733743426d77, type: 3}
+  m_Name: Boss1Dodge
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8f2ecd839e354684e913baf27e8d25df
+  position: {x: 823, y: 453}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  _minDistance: 0
+  _maxDistance: 5
+  _speed: 3
+--- !u!114 &7318730307639381214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdda85cca27b6bf479b941a0128549ce, type: 3}
+  m_Name: Boss1Chase
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: dedfdf70e7416214db3fcc01166b7c2c
+  position: {x: -401, y: 414}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  _minChaseDistance: 25
+  _maxChaseDistance: 30

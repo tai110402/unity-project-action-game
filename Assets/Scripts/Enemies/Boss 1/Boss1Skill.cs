@@ -83,10 +83,15 @@ public class Boss1Skill : MonoBehaviour
 
         if (Time.time - _intrinsicSkillStartTime > _intrinsicCooldownTime && _intrinsicList.Count < _maxNumberOfIntrinsic)
         {
-            var intrinsicProjectile = Instantiate(_intrinsic, transform.position + new Vector3(Random.Range(-4f,4f), Random.Range(0.2f, 0.4f), Random.Range(-4f, 4f)), transform.rotation);
+            var intrinsicProjectile = Instantiate(_intrinsic, transform.position + new Vector3(Random.Range(-4f,4f), Random.Range(0.6f, 1f), Random.Range(-4f, 4f)), transform.rotation);
             _intrinsicList.Add(intrinsicProjectile);
             _intrinsicSkillStartTime = Time.time;
         }
+    }
+
+    public void DefaultRangeSkillEx()
+    {
+        StartCoroutine(DefaultRangeSkill());
     }
 
     public void FirstSkillEx()
@@ -166,11 +171,11 @@ public class Boss1Skill : MonoBehaviour
     {
         if (Time.time - _defaultRangeSkillStartTime > _defaultRangeSkillCooldownTime)
         {
+            _defaultRangeSkillStartTime = Time.time;
             Vector3 temp = (_targetTransform.position - transform.position).normalized;
             transform.forward = new Vector3(temp.x, 0f, temp.z);
             _boss1Animator.CrossFade("DefaultRangeSkill", 0f);
             yield return new WaitForSeconds(0.4f);
-            _defaultRangeSkillStartTime = Time.time;
 
             var projectile = Instantiate(_defaultRangeSkillProjectile, _defaultRangeSkillSpawnPoint.position, _defaultRangeSkillSpawnPoint.rotation);
 

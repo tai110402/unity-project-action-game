@@ -5,8 +5,10 @@ using TheKiwiCoder;
 
 public class Boss1Attack : ActionNode
 {
-    private float _minDistance = 0f;
-    private float _maxDistance = 5f;
+    public string _skillAnimationName;
+    public float _minDistance = 0f;
+    public float _maxDistance = 5f;
+    public float _thirdSkillCondition = 1;
     private GameObject _playerGameObject;
 
     protected override void OnStart() {
@@ -22,22 +24,39 @@ public class Boss1Attack : ActionNode
         if (_minDistance <= distance && distance <= _maxDistance)
         {
             Boss1Skill boss1Skill = context.gameObject.GetComponent<Boss1Skill>();
-            boss1Skill.SecondSkillEx();
 
-            if (context.animator.GetCurrentAnimatorStateInfo(0).IsName("SecondSkill"))
+            if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(_skillAnimationName))
             {
+                context.agent.ResetPath();
                 return State.Running;
             }
 
-            if (boss1Skill.IntrinsicList.Count >= 3)
+            if (_skillAnimationName == "DefaultRangeSkill")
             {
-                boss1Skill.ThirdSkillEx();
+                boss1Skill.DefaultRangeSkillEx();
             }
-            if (context.animator.GetCurrentAnimatorStateInfo(0).IsName("ThirdSkill"))
+            if (_skillAnimationName == "FirstSkill")
             {
-                return State.Running;
+                boss1Skill.FirstSkillEx();
+            }
+            if (_skillAnimationName == "SecondSkill")
+            {
+                boss1Skill.SecondSkillEx();
+            }
+            if (_skillAnimationName == "ThirdSkill")
+            {
+                if (boss1Skill.IntrinsicList.Count >= _thirdSkillCondition)
+                {
+                    boss1Skill.ThirdSkillEx();
+                }
             }
         }
+        if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(_skillAnimationName))
+        {
+            context.agent.ResetPath();
+            return State.Running;
+        }
+
         return State.Success;
     }
 }
