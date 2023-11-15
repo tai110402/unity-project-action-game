@@ -26,11 +26,16 @@ public class Boss1Dodge : ActionNode
         if (_minDistance <= distance && distance <= _maxDistance)
         {
             Vector3 direction = (context.gameObject.transform.position - _playerGameObject.transform.position).normalized;
-            if (!context.animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit"))
+            if (!context.animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit") && !context.animator.GetCurrentAnimatorStateInfo(0).IsName("FirstSkill") && !context.animator.GetCurrentAnimatorStateInfo(0).IsName("SecondSkill") && !context.animator.GetCurrentAnimatorStateInfo(0).IsName("ThirdSkill"))
             {
-                context.agent.SetDestination(direction * 5);
+                context.agent.SetDestination(direction * 10);
                 context.agent.speed = _speed;
+                context.agent.angularSpeed = 720;
                 context.animator.CrossFade("Walk", 0f);
+            } else
+            {
+                context.agent.ResetPath();
+                context.gameObject.transform.forward = -direction;
             }
 
         }

@@ -114,12 +114,11 @@ public class Boss1Skill : MonoBehaviour
     {
         if (Time.time - _firstSkillStartTime > _firstSkillCooldownTime)
         {
-            _firstSkillStartTime = Time.time;
             Vector3 temp = (_targetTransform.position - transform.position).normalized;
             transform.forward = new Vector3(temp.x, 0f, temp.z);
             _boss1Animator.CrossFade("FirstSkill", 0f);
-            
-            yield return new WaitForSeconds(1f);
+            _firstSkillStartTime = Time.time;
+            yield return new WaitForSeconds(0.5f);
             _firstSkillVFX.transform.position = transform.position;
             _firstSkillVFX.SetActive(true);
             yield return new WaitForSeconds(_firstSkillDuration);

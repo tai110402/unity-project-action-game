@@ -22,32 +22,10 @@ MonoBehaviour:
   drawGizmos: 0
   children:
   - {fileID: 577340495840942830}
-  - {fileID: 577340495840942830}
-  - {fileID: 577340495840942830}
-  - {fileID: 577340495840942830}
-  - {fileID: 577340495840942830}
-  - {fileID: -7666320708133480387}
-  - {fileID: -7666320708133480387}
-  - {fileID: -7666320708133480387}
-  - {fileID: -7666320708133480387}
   - {fileID: -7666320708133480387}
   - {fileID: 4832681157116432545}
-  - {fileID: 4832681157116432545}
-  - {fileID: 4832681157116432545}
-  - {fileID: 4832681157116432545}
-  - {fileID: 4832681157116432545}
-  - {fileID: 3911782714177754356}
-  - {fileID: 3911782714177754356}
-  - {fileID: 3911782714177754356}
-  - {fileID: 3911782714177754356}
-  - {fileID: 3911782714177754356}
   - {fileID: 287280117577287076}
-  - {fileID: 287280117577287076}
-  - {fileID: 287280117577287076}
-  - {fileID: 287280117577287076}
-  - {fileID: 4581776827924550100}
-  - {fileID: 4581776827924550100}
-  - {fileID: 4581776827924550100}
+  - {fileID: 3911782714177754356}
   - {fileID: 4581776827924550100}
   - {fileID: -1197635284459095451}
 --- !u!114 &-7666320708133480387
@@ -114,7 +92,7 @@ MonoBehaviour:
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
-  drawGizmos: 1
+  drawGizmos: 0
   _skillAnimationName: SecondSkill
   _minDistance: 0
   _maxDistance: 2
@@ -134,7 +112,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 553d5adb2445498419b5ce8e8147f5b6
-  position: {x: 238, y: 420}
+  position: {x: 317.9837, y: 416.99997}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -158,7 +136,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6f9e4268b4919434ba52e86580db1294
-  position: {x: 401.15, y: 422.45013}
+  position: {x: 122, y: 419}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -205,7 +183,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: aa9076f3a7fbf744bae8159339b825f0
-  position: {x: -236, y: 413}
+  position: {x: -236, y: 411.25098}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -235,8 +213,8 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   _minDistance: 0
-  _maxDistance: 5
-  _speed: 2
+  _maxDistance: 8
+  _speed: 3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +263,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ba35768cc6b9bb844b516e4c1d732f5f
-  position: {x: 400, y: 319}
+  position: {x: 122, y: 316}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
@@ -352,7 +330,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a655efd28ae174745b6d1907a90e845a
-  position: {x: 238, y: 320}
+  position: {x: 317, y: 318}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
