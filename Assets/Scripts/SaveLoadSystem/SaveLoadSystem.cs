@@ -32,4 +32,34 @@ public class SaveLoadSystem : MonoBehaviour
             EquipmentDataSaveLoadSystem.LoadEquipmentData();
         }
     }
+
+    public void SaveData(bool resetPlayerPosition)
+    {
+        SkillDataSaveLoadSystem.SaveSkillData();
+
+        if (resetPlayerPosition)
+        {
+            RuntimePlayerData.PlayerData.Position = new Vector3(0f, 0f, 0f);
+        } else
+        {
+            RuntimePlayerData.PlayerData.Position = _playerGameObject.transform.position;
+        }
+
+        PlayerDataSaveLoadSystem.SavePlayerData();
+
+        EquipmentDataSaveLoadSystem.SaveEquipmentData();
+    }
+
+    public void LoadData()
+    {
+        SkillDataSaveLoadSystem.LoadSkillData();
+
+        PlayerDataSaveLoadSystem.LoadPlayerData();
+        CharacterController characterController = _playerGameObject.GetComponent<CharacterController>();
+        characterController.enabled = false;
+        _playerGameObject.transform.position = RuntimePlayerData.PlayerData.Position;
+        characterController.enabled = true;
+
+        EquipmentDataSaveLoadSystem.LoadEquipmentData();
+    }
 }
