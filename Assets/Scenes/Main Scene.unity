@@ -14031,7 +14031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _newSkillName: SecondAxeSkill001
-  _isUsing: 0
+  _isUsing: 1
 --- !u!54 &3500004399553033915
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15031,7 +15031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _newSkillName: ThirdAxeSkill001
-  _isUsing: 0
+  _isUsing: 1
 --- !u!33 &3500004400255736936
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15729,7 +15729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _newSkillName: FirstAxeSkill001
-  _isUsing: 0
+  _isUsing: 1
 --- !u!54 &3500004400945687609
 Rigidbody:
   m_ObjectHideFlags: 0

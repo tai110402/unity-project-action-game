@@ -1,6 +1,5 @@
+using TheKiwiCoder;
 using UnityEngine;
-using System.Collections;
-
 public class DamageableObject : MonoBehaviour
 {
     [SerializeField] private int _maxHealth = 3;
@@ -20,7 +19,11 @@ public class DamageableObject : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
-            gameObject.SetActive(false);
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            gameObject.GetComponent<BehaviourTreeRunner>().enabled = false;
+            gameObject.GetComponent<Animator>().CrossFade("EnemyDeath", 0f);
+
+            GameObject.Destroy(gameObject, 3f);
         }
     }
 }
