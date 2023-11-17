@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDamageObject : MonoBehaviour
 {
     [SerializeField] private int _damage = 3;
-    [SerializeField] private string _enemyGameObjectName = "Boss1";
+    [SerializeField] private string _enemyGameObjectTag = "Boss1";
     [SerializeField] private string _playerGetHitAnimationName = "GetStrongHit";
     [SerializeField] private bool _turnOnGetHitAnimation = false;
     public int Damage { set { _damage = value; } get { return _damage; } }
@@ -33,11 +33,11 @@ public class EnemyDamageObject : MonoBehaviour
                 }
                 if (_playerGetHitAnimationName == "GetStrongHit")
                 {
-                    playerGameObject.GetComponent<PlayerGetHit>().HitDirection = (playerGameObject.transform.position - GameObject.FindWithTag(_enemyGameObjectName).transform.position).normalized;
+                    playerGameObject.GetComponent<PlayerGetHit>().HitDirection = (playerGameObject.transform.position - GameObject.FindWithTag(_enemyGameObjectTag).transform.position).normalized;
 
                 } else if (_playerGetHitAnimationName == "GetHit")
                 {
-                    playerGameObject.GetComponent<PlayerGetHit>().HitDirection = 0.1f * (playerGameObject.transform.position - GameObject.FindWithTag(_enemyGameObjectName).transform.position).normalized;
+                    playerGameObject.GetComponent<PlayerGetHit>().HitDirection = 0.1f * (playerGameObject.transform.position - GameObject.FindWithTag(_enemyGameObjectTag).transform.position).normalized;
 
                 }
             }

@@ -23,7 +23,7 @@ public class DamageableObject : MonoBehaviour
             gameObject.GetComponent<BehaviourTreeRunner>().enabled = false;
             gameObject.GetComponent<Animator>().CrossFade("EnemyDeath", 0f);
 
-            GameObject.Destroy(gameObject, 3f);
+            GameObject.Destroy(gameObject, 4f);
         }
     }
 }

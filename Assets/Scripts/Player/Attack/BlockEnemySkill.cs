@@ -16,6 +16,7 @@ public class BlockEnemySkill : MonoBehaviour
             {
                 GameObject.Destroy(other.gameObject);
                 StartCoroutine(ApplyHitForce(_duration));
+                //GameObject.FindWithTag("Player").GetComponent<Animator>().CrossFade("BlockImpact", 0f, 1);
             }
         }
     }

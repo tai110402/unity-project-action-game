@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneMap1 : MonoBehaviour
 {
-    [SerializeField] SaveLoadSystem _saveLoadSystem;
+    [SerializeField] private SaveLoadSystem _saveLoadSystem;
+    [SerializeField] private int _indexScene;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerBox"))
         {
             _saveLoadSystem.SaveData(true);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(_indexScene );
         }
     }
 }
