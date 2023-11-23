@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class RuntimePlayerData : MonoBehaviour
 {
+    private static bool _initializeData = false;
     private static PlayerData _playerData = new PlayerData();
     public static PlayerData PlayerData { get { return _playerData; } }
 
     private void Awake()
     {
-        InitializePlayerDefaultValue();
+        if (_initializeData == false)
+        {
+            InitializePlayerDefaultValue();
+            _initializeData = true;
+        }
     }
 
     public static void InitializePlayerDefaultValue()

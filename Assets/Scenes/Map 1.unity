@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 3
-  _enemyGameObjectName: Boss1
+  _enemyGameObjectTag: Boss1
   _playerGetHitAnimationName: GetStrongHit
   _turnOnGetHitAnimation: 1
 --- !u!114 &56574239

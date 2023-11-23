@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class RuntimeEquipmentData : MonoBehaviour
 {
+    private static bool _initializeData = false;
     private static EquipmentData _equipmentData;
     public static EquipmentData EquipmentData { set { _equipmentData = value; } get { return _equipmentData; } }
 
     // Start is called before the first frame update
     void Start()
     {
-        InitializeEquipmentDefaultValue();
+        if (_initializeData == false)
+        {
+            InitializeEquipmentDefaultValue();
+            _initializeData = true;
+        }
     }
 
     public static void InitializeEquipmentDefaultValue()

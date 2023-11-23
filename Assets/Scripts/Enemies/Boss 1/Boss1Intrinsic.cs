@@ -22,7 +22,6 @@ public class Boss1Intrinsic : MonoBehaviour
         if (Time.time - _timeSpawn > _lifeTime)
         {
             GameObject.Destroy(gameObject);
-            Debug.Log("time destou");
         }
     }
 

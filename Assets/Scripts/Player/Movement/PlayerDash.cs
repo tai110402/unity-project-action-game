@@ -10,11 +10,10 @@ public class PlayerDash : MonoBehaviour
     [SerializeField] private float _dashSpeed = 15f;
     [SerializeField] private float _dashCooldown = 1f;
     [SerializeField] private float _dashStart = -5000f;
+    [SerializeField] private CharacterTrail[] _characterTrail;
 
     private CharacterController _characterController;
     private Animator _playerAnimator;
-    [SerializeField] private CharacterTrail[] _characterTrail;
-
     private bool _isDashPressed;
 
     public bool IsDashPressed { set { _isDashPressed = value; } get { return _isDashPressed; } }
@@ -26,7 +25,6 @@ public class PlayerDash : MonoBehaviour
     {
         _characterController = GetComponent<CharacterController>();
         _playerAnimator = GetComponent<Animator>();
-
         _dashStart = Time.time - _dashCooldown;
     }
 

@@ -52,20 +52,7 @@ public class PlayerMovement : MonoBehaviour
         _playerAnimator = GetComponent<Animator>();
         _playerInputActions = new PlayerInputActions();
         _playerInputActions.Enable();
-
         _movementParameterHash = Animator.StringToHash(_movementParameterName);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void FixedUpdate()
@@ -73,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
         if (_isMovePressed && _isRunPressed)
         {
             Move(_runSpeed);
-
             if (_playerAnimator.GetFloat(_movementParameterHash) < 1f)
             {
                 float temp = _playerAnimator.GetFloat(_movementParameterHash) + 0.05f;
@@ -111,9 +97,6 @@ public class PlayerMovement : MonoBehaviour
                 _playerAnimator.SetFloat(_movementParameterHash, 0.0f);
             }
 
-
-            //_playerAnimator.SetFloat(_movementParameterHash, 0.0f);
-
             Rotation(_camXZDirection.forward, _rotateSpeed);
         }
 
@@ -127,9 +110,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         Gravity();
-        //Debug.Log(_currentSpeed);
 
-        // Handel falling animation  
         if (!Physics.Raycast(transform.position, Vector3.down, _jumpHeight))
         {
             _playerAnimator.SetFloat(_movementParameterHash, -0.5f);
@@ -177,7 +158,6 @@ public class PlayerMovement : MonoBehaviour
         _yVelocity = Mathf.Clamp(_yVelocity, _minYVelocity, _maxYVelocity);
         float YMoveDistance = _yVelocity * Time.deltaTime + 0.5f * _gravity * Time.deltaTime * Time.deltaTime;
         _characterController.Move(new Vector3(0f, YMoveDistance, 0f));
-        //Debug.Log(_yVelocity);
     }
 
     private bool IsGrounded()
@@ -189,10 +169,5 @@ public class PlayerMovement : MonoBehaviour
     {
         Quaternion toRotation = Quaternion.LookRotation(target, Vector3.up);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, speed * Time.deltaTime);
-    }
-
-    private void Animation()
-    {
-        
     }
 }
