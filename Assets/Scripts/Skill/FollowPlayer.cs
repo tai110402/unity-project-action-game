@@ -5,10 +5,20 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] Transform _playerTransform;
-
+    private float timeFollow = 0.15f;
     private void OnEnable()
     {
-        transform.position = _playerTransform.position;
-        transform.forward = _playerTransform.forward;
+        float time = Time.time;
+        StartCoroutine(Follow(time, timeFollow));
+    }
+
+    IEnumerator Follow(float startTime, float followTime)
+    {
+        while (Time.time - startTime < followTime)
+        {
+            transform.position = _playerTransform.position;
+            transform.forward = _playerTransform.forward;
+            yield return new WaitForSeconds(0.001f);
+        }
     }
 }
