@@ -17,6 +17,8 @@ public class SaveLoadSystem : MonoBehaviour
             PlayerDataSaveLoadSystem.SavePlayerData();
 
             EquipmentDataSaveLoadSystem.SaveEquipmentData();
+            QuestDataSaveLoadSystem.SaveQuestData();
+            Debug.Log(RuntimeQuestData.GetQuestData());
         }
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -30,6 +32,7 @@ public class SaveLoadSystem : MonoBehaviour
             characterController.enabled = true;
 
             EquipmentDataSaveLoadSystem.LoadEquipmentData();
+            QuestDataSaveLoadSystem.LoadQuestData();
         }
     }
 
@@ -48,6 +51,7 @@ public class SaveLoadSystem : MonoBehaviour
         PlayerDataSaveLoadSystem.SavePlayerData();
 
         EquipmentDataSaveLoadSystem.SaveEquipmentData();
+        QuestDataSaveLoadSystem.SaveQuestData();
     }
 
     public void LoadData()
@@ -61,5 +65,6 @@ public class SaveLoadSystem : MonoBehaviour
         characterController.enabled = true;
 
         EquipmentDataSaveLoadSystem.LoadEquipmentData();
+        QuestDataSaveLoadSystem.LoadQuestData();
     }
 }

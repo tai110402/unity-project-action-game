@@ -20,8 +20,15 @@ public class DamageableObject : MonoBehaviour
         if (_currentHealth <= 0)
         {
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
-            gameObject.GetComponent<BehaviourTreeRunner>().enabled = false;
-            gameObject.GetComponent<Animator>().CrossFade("EnemyDeath", 0f);
+            if (gameObject.GetComponent<BehaviourTreeRunner>() != null)
+            {
+                gameObject.GetComponent<BehaviourTreeRunner>().enabled = false;
+            }
+            if (gameObject.GetComponent<Animator>())
+            {
+                gameObject.GetComponent<Animator>().CrossFade("EnemyDeath", 0f);
+            }
+            RuntimeQuestData.ProgressQuest();
 
             GameObject.Destroy(gameObject, 4f);
         }
