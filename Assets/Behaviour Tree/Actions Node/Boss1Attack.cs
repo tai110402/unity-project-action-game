@@ -38,7 +38,6 @@ public class Boss1Attack : ActionNode
             if (_skillAnimationName == "FirstSkill")
             {
                 boss1Skill.FirstSkillEx();
-               
             }
             if (_skillAnimationName == "SecondSkill")
             {

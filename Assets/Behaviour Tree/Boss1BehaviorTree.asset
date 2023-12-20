@@ -133,6 +133,10 @@ MonoBehaviour:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
+  _skillAnimationName: 
+  _minDistance: 0
+  _maxDistance: 5
+  _thirdSkillCondition: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +188,9 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   message: 584
+  returnRunning: 0
+  returnSuccess: 0
+  returnFailure: 0
 --- !u!114 &816048638812986010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +211,8 @@ MonoBehaviour:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
+  _minChaseDistance: 10
+  _maxChaseDistance: 20
 --- !u!114 &1223852730836606654
 MonoBehaviour:
   m_ObjectHideFlags: 0
