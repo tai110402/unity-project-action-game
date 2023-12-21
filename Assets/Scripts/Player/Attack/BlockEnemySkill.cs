@@ -19,6 +19,12 @@ public class BlockEnemySkill : MonoBehaviour
                 //GameObject.FindWithTag("Player").GetComponent<Animator>().CrossFade("BlockImpact", 0f, 1);
             }
         }
+
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log("ok");
+            other.GetComponentInParent<Animator>().CrossFade("BlockedReaction", 0f);
+        }
     }
 
     IEnumerator ApplyHitForce(float duration)

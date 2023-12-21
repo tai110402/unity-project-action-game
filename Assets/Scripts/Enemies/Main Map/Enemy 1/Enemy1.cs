@@ -6,46 +6,93 @@ using UnityEngine.AI;
 public class Enemy1 : MonoBehaviour
 {
     [SerializeField] private string _rangeAttackAnimationName = "RangeAttack";
+    [SerializeField] private string _meleeAttackAnimationName = "MeleeAttack";
     [SerializeField] private GameObject _projectile;
     [SerializeField] private float _projectileVelocity = 10f;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Transform _target;
+    [SerializeField] private float _rangeSkillCooldownTime = 3f;
+    [SerializeField] private float _meleeSkillCooldownTime = 3f;
 
+    private DamageableObject _damageableObject;
     private Animator _enemyAnimator;
     private NavMeshAgent _agent;
+    private GameObject _player;
+    private float _rangeSkillStartTime = -1000f;
+    private float _meleeSkillStartTime = -1000f;
 
     // Start is called before the first frame update
     void Start()
     {
+        _damageableObject = GetComponent<DamageableObject>();
         _enemyAnimator = GetComponent<Animator>();
+        _agent = GetComponent<NavMeshAgent>();
+        _player = GameObject.FindWithTag("Player");
+
+        _meleeSkillStartTime = Time.time - _meleeSkillCooldownTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (_damageableObject.CurrentHealth >= 0 && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BlockedReaction") && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit"))
         {
-            RangeAttack();
-        }
+            float distance = Vector3.Magnitude(_player.transform.position - transform.position);
 
-        //RangeAttack();
+            if (distance < 5)
+            {
+                if (distance > 1f)
+                {
+                    if (!_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName(_meleeAttackAnimationName))
+                    {
+                        _agent.SetDestination(_player.transform.position);
+                        _enemyAnimator.CrossFade("Walk", 0f);
+                    }
+                }
+                else
+                {
+                    _agent.ResetPath();
+
+                    if (Time.time - _meleeSkillCooldownTime >= _meleeSkillStartTime)
+                    {
+                        _meleeSkillStartTime = Time.time;
+                        MeleeAttack();
+                    }
+                }
+            }
+            else if (distance < 15)
+            {
+                if (Time.time - _rangeSkillCooldownTime >= _rangeSkillStartTime)
+                {
+                    _rangeSkillStartTime = Time.time;
+                    RangeAttack();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                RangeAttack();
+            }
+        }
     }
 
     private void RangeAttack()
     {
-        //transform.forward = (_target.position - transform.position);
+        _agent.enabled = false;
+        Vector3 direction = Vector3.Normalize(_target.position - transform.position);
+        direction = new Vector3(direction.x, 0, direction.z);
+        transform.forward = (_target.position - transform.position);
         _enemyAnimator.CrossFade(_rangeAttackAnimationName, 0.1f);
-        
+        _agent.enabled = true;
     }
 
     private void MeleeAttack()
     {
-
+        _enemyAnimator.CrossFade(_meleeAttackAnimationName, 0.1f);
     }
 
     public void ThrowObject()
     {
-        Debug.Log("ok");
         Vector3 direction = ((_target.position + new Vector3(0, 1, 0)) - _spawnPoint.position).normalized;
         var projectile = Instantiate(_projectile, _spawnPoint.transform.position, _spawnPoint.transform.rotation);
         projectile.GetComponent<Rigidbody>().velocity = direction * _projectileVelocity * Time.deltaTime;

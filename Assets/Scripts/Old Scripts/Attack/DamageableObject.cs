@@ -4,7 +4,7 @@ public class DamageableObject : MonoBehaviour
 {
     [SerializeField] private int _maxHealth = 3;
     [SerializeField] private int _currentHealth;
-
+    [SerializeField] private float _timeAfterDeath = 4f;
     public int CurrentHealth { get { return _currentHealth; } set { _currentHealth = value; } }
     public int MaxHealth { get { return _maxHealth; } set { _maxHealth = value; } }
 
@@ -30,7 +30,7 @@ public class DamageableObject : MonoBehaviour
             }
             RuntimeQuestData.ProgressQuest();
 
-            GameObject.Destroy(gameObject, 4f);
+            GameObject.Destroy(gameObject, _timeAfterDeath);
         }
     }
 }

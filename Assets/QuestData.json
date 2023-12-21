@@ -4,7 +4,7 @@
             "Id": "001",
             "Title": "Quest 1",
             "Content": "Di den nga 3 dau tien",
-            "State": "doing",
+            "State": "complete",
             "Type": "moving",
             "Position": {
                 "x": 11.0,
@@ -18,7 +18,7 @@
             "Id": "002",
             "Title": "Quest 2",
             "Content": "Danh bai quai vat xuat hien",
-            "State": "lock",
+            "State": "doing",
             "Type": "attack",
             "Position": {
                 "x": 11.0,

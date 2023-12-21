@@ -37,8 +37,9 @@ public class EnemyDamageObject : MonoBehaviour
 
                 } else if (_playerGetHitAnimationName == "GetHit")
                 {
-                    playerGameObject.GetComponent<PlayerGetHit>().HitDirection = 0.1f * (playerGameObject.transform.position - GameObject.FindWithTag(_enemyGameObjectTag).transform.position).normalized;
-
+                    //playerGameObject.GetComponent<PlayerGetHit>().HitDirection = 0.1f * (playerGameObject.transform.position - GameObject.FindWithTag(_enemyGameObjectTag).transform.position).normalized;
+                    playerGameObject.GetComponent<PlayerGetHit>().HitDirection = 0.1f * (playerGameObject.transform.position - other.transform.position).normalized;
+                    Destroy(gameObject);
                 }
             }
         }
