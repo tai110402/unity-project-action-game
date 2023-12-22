@@ -14,6 +14,7 @@ public class RuntimePlayerData : MonoBehaviour
         {
             InitializePlayerDefaultValue();
             _initializeData = true;
+            Debug.Log("osdfjosdif");
         }
     }
 

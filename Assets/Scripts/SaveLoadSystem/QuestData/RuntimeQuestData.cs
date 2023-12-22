@@ -13,25 +13,47 @@ public class RuntimeQuestData : MonoBehaviour
     {
         if (_initializeData == false)
         {
-            InitializeQuestsDefaultValue();
+            InitializeBalanceExperienceQuestsDefaultValue();
             _initializeData = true;
         }
     }
 
-    public static void InitializeQuestsDefaultValue()
+    public static void InitializeChallengeQuestsDefaultValue()
     {
         _questData = new QuestData()
         {
-            Quests = new Quest[] { new Quest() {Id = "001" , State = "doing", Type = "moving", Position = new Vector3(11, 0.74f, 16),Title = "Quest 1", Content = "Di den nga 3 dau tien"},
-                    new Quest() {Id = "002" , State = "lock", Type = "attack", Position = new Vector3(11, 0.74f, 16), Progress = 0, Condition = 5 , Title = "Quest 2", Content = "Danh bai quai vat xuat hien"},
-                    new Quest() {Id = "003" , State = "lock", Type = "moving", Position = new Vector3(37.7f, 0.93f, 10.0f), Title = "Quest 3", Content = "Di tiep ve ben phai"},
-                    new Quest() {Id = "004" , State = "lock", Type = "attack", Position = new Vector3(37.7f, 0.93f, 10.0f), Progress = 0, Condition = 3, Title = "Quest 4", Content = "Danh bai quai vat 2 xuat hien"},
-                    new Quest() {Id = "005" , State = "lock", Type = "moving", Position = new Vector3(11, 0.74f, 16) ,Title = "Quest 5", Content = "Di ve nga 3"},
-                    new Quest() {Id = "006" , State = "lock", Type = "moving", Position = new Vector3(15, 4.4f, 60),Title = "Quest 5", Content = "Di thang den chan cau" },
-                    new Quest() {Id = "007" , State = "lock", Type = "moving", Position = new Vector3(40, 9.84f, 69.42f),Title = "Quest 5", Content = "Den ben kia cau" },
-                    new Quest() {Id = "008" , State = "lock", Type = "moving", Position = new Vector3(76, 0.5f, 89.34f),Title = "Quest 5", Content = "Di den bo song" },
-                    new Quest() {Id = "009" , State = "lock", Type = "attack", Position = new Vector3(83.2f, 1.25f, 99f), Progress = 0, Condition = 4, Title = "Quest 4", Content = "Danh bai quai vat 3 xuat hien"},
-                    new Quest() {Id = "010" , State = "lock", Type = "moving", Position = new Vector3(84, 0.9f, 148.5f),Title = "Quest 5", Content = "Di den hang dong" },
+            Quests = new Quest[] { new Quest() {Id = "001" , State = "doing", Type = "moving", Position = new Vector3(11, 0.74f, 16),Title = "Quest 1", Content = "C-Di den nga 3 dau tien"},
+                    new Quest() {Id = "202" , State = "lock", Type = "attack", Position = new Vector3(11, 0.74f, 16), Progress = 0, Condition = 4 , Title = "Quest 2", Content = "C-Danh bai quai vat xuat hien"},
+                    new Quest() {Id = "003" , State = "lock", Type = "moving", Position = new Vector3(37.7f, 0.93f, 10.0f), Title = "Quest 3", Content = "C-Di tiep ve ben phai"},
+                    new Quest() {Id = "204" , State = "lock", Type = "attack", Position = new Vector3(37.7f, 0.93f, 10.0f), Progress = 0, Condition = 3, Title = "Quest 4", Content = "C-Danh bai quai vat 2 xuat hien"},
+                    new Quest() {Id = "005" , State = "lock", Type = "moving", Position = new Vector3(11, 0.74f, 16) ,Title = "Quest 5", Content = "C-Di ve nga 3"},
+                    new Quest() {Id = "006" , State = "lock", Type = "moving", Position = new Vector3(15, 4.4f, 60),Title = "Quest 5", Content = "C-Di thang den chan cau" },
+                    new Quest() {Id = "007" , State = "lock", Type = "moving", Position = new Vector3(40, 9.84f, 69.42f),Title = "Quest 5", Content = "C-Den ben kia cau" },
+                    new Quest() {Id = "008" , State = "lock", Type = "moving", Position = new Vector3(76, 0.5f, 89.34f),Title = "Quest 5", Content = "C-Di den bo song" },
+                    new Quest() {Id = "209" , State = "lock", Type = "attack", Position = new Vector3(83.2f, 1.25f, 99f), Progress = 0, Condition = 4, Title = "Quest 4", Content = "C-Danh bai quai vat 3 xuat hien"},
+                    new Quest() {Id = "010" , State = "lock", Type = "moving", Position = new Vector3(84, 0.9f, 148.5f),Title = "Quest 5", Content = "C-Di den hang dong" },
+
+
+                    new Quest() {Id = "100" , State = "lock", Type = "moving", Position = new Vector3(111, 111, 111) ,Title = "Quest 5", Content = "Complete Quest"},
+
+            }
+        };
+    }
+
+    public static void InitializeBalanceExperienceQuestsDefaultValue()
+    {
+        _questData = new QuestData()
+        {
+            Quests = new Quest[] { new Quest() {Id = "001" , State = "doing", Type = "moving", Position = new Vector3(11, 0.74f, 16),Title = "Quest 1", Content = "E-Di den nga 3 dau tien"},
+                    new Quest() {Id = "102" , State = "lock", Type = "attack", Position = new Vector3(11, 0.74f, 16), Progress = 0, Condition = 2 , Title = "Quest 2", Content = "E-Danh bai quai vat xuat hien"},
+                    new Quest() {Id = "003" , State = "lock", Type = "moving", Position = new Vector3(37.7f, 0.93f, 10.0f), Title = "Quest 3", Content = "E-Di tiep ve ben phai"},
+                    new Quest() {Id = "104" , State = "lock", Type = "attack", Position = new Vector3(37.7f, 0.93f, 10.0f), Progress = 0, Condition = 3, Title = "Quest 4", Content = "E-Danh bai quai vat 2 xuat hien"},
+                    new Quest() {Id = "005" , State = "lock", Type = "moving", Position = new Vector3(11, 0.74f, 16) ,Title = "Quest 5", Content = "E-Di ve nga 3"},
+                    new Quest() {Id = "006" , State = "lock", Type = "moving", Position = new Vector3(15, 4.4f, 60),Title = "Quest 5", Content = "E-Di thang den chan cau" },
+                    new Quest() {Id = "007" , State = "lock", Type = "moving", Position = new Vector3(40, 9.84f, 69.42f),Title = "Quest 5", Content = "E-Den ben kia cau" },
+                    new Quest() {Id = "008" , State = "lock", Type = "moving", Position = new Vector3(76, 0.5f, 89.34f),Title = "Quest 5", Content = "E-Di den bo song" },
+                    new Quest() {Id = "109" , State = "lock", Type = "attack", Position = new Vector3(83.2f, 1.25f, 99f), Progress = 0, Condition = 4, Title = "Quest 4", Content = "E-Danh bai quai vat 3 xuat hien"},
+                    new Quest() {Id = "010" , State = "lock", Type = "moving", Position = new Vector3(84, 0.9f, 148.5f),Title = "Quest 5", Content = "E-Di den hang dong" },
 
 
                     new Quest() {Id = "100" , State = "lock", Type = "moving", Position = new Vector3(111, 111, 111) ,Title = "Quest 5", Content = "Complete Quest"},
@@ -93,6 +115,6 @@ public class RuntimeQuestData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

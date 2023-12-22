@@ -9,6 +9,7 @@ TagManager:
   - EnemySkill
   - Boss2
   - Enemy
+  - MeleeEnemySkill
   layers:
   - Default
   - TransparentFX

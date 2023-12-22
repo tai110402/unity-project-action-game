@@ -44,8 +44,10 @@ public class PlayerGetHit : MonoBehaviour
 
         if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetStrongHit") || _playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetHit"))
         {
-            _characterController.Move(_hitDirection * 5 * Time.deltaTime);
-            //transform.forward = -_hitDirection;
+            if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("GetStrongHit"))
+            {
+                _characterController.Move(_hitDirection * 5 * Time.deltaTime);
+            }
         }
     }
 }

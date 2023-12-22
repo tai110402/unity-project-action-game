@@ -13,6 +13,8 @@ public class Enemy1 : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private float _rangeSkillCooldownTime = 3f;
     [SerializeField] private float _meleeSkillCooldownTime = 3f;
+    [SerializeField] private Transform _meleeDamageObjectSpawnPoint;
+    [SerializeField] private GameObject _meleeDamageObject;
 
     private DamageableObject _damageableObject;
     private Animator _enemyAnimator;
@@ -41,7 +43,7 @@ public class Enemy1 : MonoBehaviour
 
             if (distance < 5)
             {
-                if (distance > 1f)
+                if (distance > 1.2f)
                 {
                     if (!_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName(_meleeAttackAnimationName))
                     {
@@ -89,6 +91,11 @@ public class Enemy1 : MonoBehaviour
     private void MeleeAttack()
     {
         _enemyAnimator.CrossFade(_meleeAttackAnimationName, 0.1f);
+    }
+
+    public void MeleeDamageObject()
+    {
+        var damageObject = Instantiate(_meleeDamageObject, _meleeDamageObjectSpawnPoint.transform.position, _meleeDamageObjectSpawnPoint.transform.rotation);
     }
 
     public void ThrowObject()

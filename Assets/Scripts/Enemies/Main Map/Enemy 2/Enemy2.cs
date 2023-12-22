@@ -8,6 +8,8 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] private string _meleeAttackAnimationName = "MeleeAttack";
     [SerializeField] private Transform _target;
     [SerializeField] private float _meleeSkillCooldownTime = 3f;
+    [SerializeField] private Transform _meleeDamageObjectSpawnPoint;
+    [SerializeField] private GameObject _meleeDamageObject;
 
     private DamageableObject _damageableObject;
     private Animator _enemyAnimator;
@@ -60,5 +62,10 @@ public class Enemy2 : MonoBehaviour
     private void MeleeAttack()
     {
         _enemyAnimator.CrossFade(_meleeAttackAnimationName, 0.1f);
+    }
+
+    public void MeleeDamageObject()
+    {
+        var damageObject = Instantiate(_meleeDamageObject, _meleeDamageObjectSpawnPoint.transform.position, _meleeDamageObjectSpawnPoint.transform.rotation);
     }
 }
