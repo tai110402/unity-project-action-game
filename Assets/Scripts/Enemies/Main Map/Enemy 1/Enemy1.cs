@@ -103,6 +103,7 @@ public class Enemy1 : MonoBehaviour
         Vector3 direction = ((_target.position + new Vector3(0, 1, 0)) - _spawnPoint.position).normalized;
         var projectile = Instantiate(_projectile, _spawnPoint.transform.position, _spawnPoint.transform.rotation);
         projectile.GetComponent<Rigidbody>().velocity = direction * _projectileVelocity * Time.deltaTime;
+        Destroy(projectile, 3f);
 
     }
 
