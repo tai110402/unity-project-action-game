@@ -13308,6 +13308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 3000
   _currentHealth: 0
+  _timeAfterDeath: 4
 --- !u!136 &919132148435672572
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17377,6 +17378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _currentHealth: 0
+  _timeAfterDeath: 4
 --- !u!136 &2682386636619432131
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17405,6 +17407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _currentHealth: 0
+  _timeAfterDeath: 4
 --- !u!136 &2682386636684011583
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17447,6 +17450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _currentHealth: 0
+  _timeAfterDeath: 4
 --- !u!136 &2682386636956826228
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17475,6 +17479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _currentHealth: 0
+  _timeAfterDeath: 4
 --- !u!136 &2682386637940371169
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17503,6 +17508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _currentHealth: 0
+  _timeAfterDeath: 4
 --- !u!4 &2682386637999149644
 Transform:
   m_ObjectHideFlags: 0
@@ -17559,6 +17565,8 @@ MonoBehaviour:
   - {fileID: 3024353786533916179}
   - {fileID: 3024353785806688260}
   _minDistanceRenderArrow: 8
+  _enemiesInWaveArray: 
+  _timeAppearArray: []
 --- !u!137 &2700832699114317580
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a7e890fc2a6614bb37fdc09ffc52bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
+  _damage: 5
   _enemyGameObjectTag: Boss1
   _playerGetHitAnimationName: GetHit
   _turnOnGetHitAnimation: 1
