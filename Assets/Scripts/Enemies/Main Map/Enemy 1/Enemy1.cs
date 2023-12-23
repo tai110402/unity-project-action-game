@@ -35,7 +35,7 @@ public class Enemy1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (_damageableObject.CurrentHealth >= 0 && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BlockedReaction") && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit"))
         {

@@ -8,6 +8,11 @@ public class VFXSwordSkillSlashControl : MonoBehaviour
     [SerializeField] private GameObject[] _VFXFirstSkill001Object;
     [SerializeField] private GameObject[] _VFXSecondSkill001Object;
     [SerializeField] private GameObject[] _VFXThirdSkill001Object;
+
+    [SerializeField] private GameObject[] _VFXFirstSkill002Object;
+    [SerializeField] private GameObject[] _VFXSecondSkill002Object;
+    [SerializeField] private GameObject[] _VFXThirdSkill002Object;
+
     [SerializeField] private float _timeSetVFX=  0.4f;
 
     void SetVFXFirstNormalSwordSkillActiveTrue()
@@ -31,6 +36,7 @@ public class VFXSwordSkillSlashControl : MonoBehaviour
         _VFXNormalSkillObject[1].SetActive(false);
     }
 
+    // 001
     void SetVFXFirstSwordSkill001ActiveTrue()
     {
         _VFXFirstSkill001Object[0].SetActive(true);
@@ -84,5 +90,72 @@ public class VFXSwordSkillSlashControl : MonoBehaviour
     void SetVFXThirdSwordSkill001ActiveFalse()
     {
         _VFXThirdSkill001Object[0].SetActive(false);
+    }
+
+    //002
+    void SetVFXFirstSwordSkill002ActiveTrue()
+    {
+        _VFXFirstSkill002Object[0].SetActive(true);
+        Invoke(nameof(SetVFXFirstSwordSkill002ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXFirstSwordSkill002ActiveFalse()
+    {
+        _VFXFirstSkill002Object[0].SetActive(false);
+    }
+
+    void SetVFXSecondSwordSkill002Slash1ActiveTrue()
+    {
+        _VFXSecondSkill002Object[0].SetActive(true);
+        Invoke(nameof(SetVFXSecondSwordSkill002Slash1ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXSecondSwordSkill002Slash1ActiveFalse()
+    {
+        _VFXSecondSkill002Object[0].SetActive(false);
+    }
+
+    void SetVFXSecondSwordSkill002Slash2ActiveTrue()
+    {
+        _VFXSecondSkill002Object[1].SetActive(true);
+        Invoke(nameof(SetVFXSecondSwordSkill002Slash2ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXSecondSwordSkill002Slash2ActiveFalse()
+    {
+        _VFXSecondSkill002Object[1].SetActive(false);
+    }
+
+    //void SetVFXSecondSwordSkill002Slash3ActiveTrue()
+    //{
+    //    _VFXSecondSkill002Object[2].SetActive(true);
+    //    Invoke(nameof(SetVFXSecondSwordSkill002Slash3ActiveFalse), _timeSetVFX);
+    //}
+//
+    //void SetVFXSecondSwordSkill002Slash3ActiveFalse()
+    //{
+    //    _VFXSecondSkill002Object[2].SetActive(false);
+    //}
+
+    void SetVFXThirdSwordSkill002Slash1ActiveTrue()
+    {
+        _VFXThirdSkill002Object[0].SetActive(true);
+        Invoke(nameof(SetVFXThirdSwordSkill002Slash1ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXThirdSwordSkill002Slash1ActiveFalse()
+    {
+        _VFXThirdSkill002Object[0].SetActive(false);
+    }
+
+    void SetVFXSwordSkill002Slash2ActiveTrue()
+    {
+        _VFXThirdSkill002Object[1].SetActive(true);
+        Invoke(nameof(SetVFXThirdSwordSkill002Slash2ActiveFalse), _timeSetVFX);
+    }
+
+    void SetVFXThirdSwordSkill002Slash2ActiveFalse()
+    {
+        _VFXThirdSkill002Object[1].SetActive(false);
     }
 }

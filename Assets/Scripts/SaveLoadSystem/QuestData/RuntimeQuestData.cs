@@ -54,7 +54,7 @@ public class RuntimeQuestData : MonoBehaviour
                     new Quest() {Id = "008" , State = "lock", Type = "moving", Position = new Vector3(76, 0.5f, 89.34f),Title = "Quest 5", Content = "C-Di den bo song" },
                     new Quest() {Id = "209" , State = "lock", Type = "attack", Position = new Vector3(83.2f, 1.25f, 99f), Progress = 0, Condition = 5, Title = "Quest 4", Content = "C-Danh bai quai vat 3 xuat hien"},
                     new Quest() {Id = "010" , State = "lock", Type = "moving", Position = new Vector3(69, 0.55f, 148.5f),Title = "Quest 5", Content = "C-Di den hang dong" },
-                    new Quest() {Id = "211" , State = "lock", Type = "attack", Position = new Vector3(63, 0.5f, 146), Progress = 0, Condition = 6, Title = "Quest 4", Content = "C-Danh bai quai vat 4 xuat hien"},
+                    new Quest() {Id = "211" , State = "lock", Type = "attack", Position = new Vector3(63, 0.5f, 146), Progress = 0, Condition = 5, Title = "Quest 4", Content = "C-Danh bai quai vat 4 xuat hien"},
 
                     new Quest() {Id = "100" , State = "lock", Type = "moving", Position = new Vector3(111, 111, 111) ,Title = "Quest 5", Content = "Complete Quest"},
 
