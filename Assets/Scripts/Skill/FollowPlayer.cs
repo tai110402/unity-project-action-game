@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] Transform _playerTransform;
-    private float timeFollow = 0.15f;
+    private float timeFollow = 0.05f;
     private void OnEnable()
     {
         float time = Time.time;

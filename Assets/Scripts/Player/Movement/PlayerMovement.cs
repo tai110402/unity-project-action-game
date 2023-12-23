@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _maxYVelocity = 100f;
     [SerializeField] private float _distanceToCheckIsGrounded = 0.1f;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioSource _walkSound;
     // Player Component
     private CharacterController _characterController;
     private Animator _playerAnimator;
@@ -68,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (_isMovePressed)
         {
+            _walkSound.enabled = true;
             Move(_walkSpeed);
 
             if (_playerAnimator.GetFloat(_movementParameterHash) < 0.5f)
@@ -83,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
             }
         } else
         {
+            _walkSound.enabled = false;
             if (_currentSpeed > 0f)
             {
                 _currentSpeed = 0f;
