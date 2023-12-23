@@ -11599,6 +11599,12 @@ MonoBehaviour:
   - {fileID: 403150125}
   _VFXSecondSkill001Object: []
   _VFXThirdSkill001Object: []
+  _VFXFirstSkill002Object: []
+  _VFXSecondSkill002Object: []
+  _VFXThirdSkill002Object: []
+  _VFXFirstSkill003Object: []
+  _VFXSecondSkill003Object: []
+  _VFXThirdSkill003Object: []
   _timeSetVFX: 0.4
 --- !u!114 &919132147681472707
 MonoBehaviour:
@@ -11807,6 +11813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 3000
   _currentHealth: 0
+  _timeAfterDeath: 4
 --- !u!136 &919132148435672572
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11941,6 +11948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 500
   _currentHealth: 0
+  _timeAfterDeath: 4
 --- !u!136 &919132149595305953
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11969,6 +11977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _intrinsicSkillGameObject: {fileID: 741251166}
   _firstSkillGameObject: {fileID: 6605893571758772598}
+  _firstSkillGameObjectSpawnPoint: {fileID: 0}
 --- !u!54 &919132149595305955
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -38791,7 +38800,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6605893571758772598}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -40067,13 +40076,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6605893571758772598}
-  m_LocalRotation: {x: -0.6853369, y: 0.17410745, z: -0.1741075, w: 0.6853369}
-  m_LocalPosition: {x: 0, y: 1.113, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0.5872926, y: 0.14919963, z: -0.19587311, w: 0.77101266}
+  m_LocalPosition: {x: 0, y: 0.925, z: 0.06}
+  m_LocalScale: {x: 0.413735, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 543450653267373413}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -61.492, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: -57.905, y: 60.001, z: -63.937}
 --- !u!23 &5864043083654964091
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41156,11 +41165,11 @@ GameObject:
   - component: {fileID: 6605893571758772600}
   m_Layer: 0
   m_Name: First Skill
-  m_TagString: Untagged
+  m_TagString: MeleeEnemySkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &6605893571758772599
 Rigidbody:
   m_ObjectHideFlags: 0

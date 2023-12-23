@@ -67,6 +67,6 @@ public class Enemy2 : MonoBehaviour
     public void MeleeDamageObject()
     {
         var damageObject = Instantiate(_meleeDamageObject, _meleeDamageObjectSpawnPoint.transform.position, _meleeDamageObjectSpawnPoint.transform.rotation);
-        Destroy(damageObject, 0.5f);
+        Destroy(damageObject, 0.2f);
     }
 }
