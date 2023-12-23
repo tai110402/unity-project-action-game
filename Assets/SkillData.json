@@ -84,7 +84,7 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
+            "IsUnlocked": true,
             "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
@@ -132,9 +132,9 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
-            "IsUsing": false,
-            "Level": 1,
+            "IsUnlocked": true,
+            "IsUsing": true,
+            "Level": 5,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 10,
@@ -182,7 +182,7 @@
             ],
             "IsUnlocked": true,
             "IsUsing": true,
-            "Level": 1,
+            "Level": 5,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 10,
@@ -194,6 +194,54 @@
         },
         {
             "AnimationName": "FirstSwordSkill001",
+            "TimeCoolDown": [
+                10.0,
+                9.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "SlashArray": [
+                {
+                    "Slash": [
+                        1.0
+                    ]
+                },
+                {
+                    "Slash": [
+                        1.2000000476837159
+                    ]
+                },
+                {
+                    "Slash": [
+                        1.5
+                    ]
+                },
+                {
+                    "Slash": [
+                        1.7999999523162842
+                    ]
+                },
+                {
+                    "Slash": [
+                        2.299999952316284
+                    ]
+                }
+            ],
+            "IsUnlocked": true,
+            "IsUsing": false,
+            "Level": 1,
+            "MaxLevel": 5,
+            "ExpToUpgradeArray": [
+                10,
+                20,
+                30,
+                40,
+                50
+            ]
+        },
+        {
+            "AnimationName": "FirstSwordSkill002",
             "TimeCoolDown": [
                 10.0,
                 9.0,
@@ -241,54 +289,6 @@
             ]
         },
         {
-            "AnimationName": "FirstSwordSkill002",
-            "TimeCoolDown": [
-                10.0,
-                9.0,
-                9.0,
-                8.0,
-                8.0
-            ],
-            "SlashArray": [
-                {
-                    "Slash": [
-                        1.0
-                    ]
-                },
-                {
-                    "Slash": [
-                        1.2000000476837159
-                    ]
-                },
-                {
-                    "Slash": [
-                        1.5
-                    ]
-                },
-                {
-                    "Slash": [
-                        1.7999999523162842
-                    ]
-                },
-                {
-                    "Slash": [
-                        2.299999952316284
-                    ]
-                }
-            ],
-            "IsUnlocked": false,
-            "IsUsing": false,
-            "Level": 1,
-            "MaxLevel": 5,
-            "ExpToUpgradeArray": [
-                10,
-                20,
-                30,
-                40,
-                50
-            ]
-        },
-        {
             "AnimationName": "FirstSwordSkill003",
             "TimeCoolDown": [
                 10.0,
@@ -324,7 +324,7 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
+            "IsUnlocked": true,
             "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
@@ -382,8 +382,8 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
-            "IsUsing": false,
+            "IsUnlocked": true,
+            "IsUsing": true,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -440,7 +440,7 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
+            "IsUnlocked": true,
             "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
@@ -498,7 +498,7 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
+            "IsUnlocked": true,
             "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
@@ -546,7 +546,7 @@
                     ]
                 }
             ],
-            "IsUnlocked": false,
+            "IsUnlocked": true,
             "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
@@ -600,7 +600,7 @@
                 }
             ],
             "IsUnlocked": true,
-            "IsUsing": false,
+            "IsUsing": true,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
@@ -697,7 +697,7 @@
             ],
             "IsUnlocked": true,
             "IsUsing": true,
-            "Level": 5,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 10,
@@ -745,7 +745,7 @@
             ],
             "IsUnlocked": true,
             "IsUsing": true,
-            "Level": 5,
+            "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
                 10,
@@ -965,7 +965,7 @@
                     ]
                 }
             ],
-            "IsUnlocked": true,
+            "IsUnlocked": false,
             "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
@@ -1013,8 +1013,8 @@
                     ]
                 }
             ],
-            "IsUnlocked": true,
-            "IsUsing": true,
+            "IsUnlocked": false,
+            "IsUsing": false,
             "Level": 1,
             "MaxLevel": 5,
             "ExpToUpgradeArray": [
