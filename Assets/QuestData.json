@@ -116,21 +116,21 @@
             "Id": "109",
             "Title": "Quest 4",
             "Content": "E-Danh bai quai vat 3 xuat hien",
-            "State": "doing",
+            "State": "complete",
             "Type": "attack",
             "Position": {
                 "x": 83.19999694824219,
                 "y": 1.25,
                 "z": 99.0
             },
-            "Progress": 2,
+            "Progress": 3,
             "Condition": 4
         },
         {
             "Id": "010",
             "Title": "Quest 5",
             "Content": "E-Di den hang dong",
-            "State": "lock",
+            "State": "complete",
             "Type": "moving",
             "Position": {
                 "x": 69.0,
@@ -144,21 +144,21 @@
             "Id": "111",
             "Title": "Quest 4",
             "Content": "E-Danh bai quai vat 4 xuat hien",
-            "State": "lock",
+            "State": "complete",
             "Type": "attack",
             "Position": {
                 "x": 63.0,
                 "y": 0.5,
                 "z": 146.0
             },
-            "Progress": 0,
+            "Progress": 3,
             "Condition": 4
         },
         {
             "Id": "012",
             "Title": "Quest 5",
             "Content": "E-Di vao cong khong gian",
-            "State": "lock",
+            "State": "complete",
             "Type": "moving",
             "Position": {
                 "x": 98.2699966430664,
@@ -172,7 +172,7 @@
             "Id": "013",
             "Title": "Quest 5",
             "Content": "E-Di thang ve phia truoc",
-            "State": "lock",
+            "State": "complete",
             "Type": "moving",
             "Position": {
                 "x": 0.0,
@@ -186,21 +186,21 @@
             "Id": "114",
             "Title": "Quest 4",
             "Content": "E-Danh bai quai vat 5 xuat hien",
-            "State": "lock",
+            "State": "complete",
             "Type": "attack",
             "Position": {
                 "x": 0.0,
                 "y": 0.25,
                 "z": 6.0
             },
-            "Progress": 0,
+            "Progress": 1,
             "Condition": 2
         },
         {
             "Id": "015",
             "Title": "Quest 5",
             "Content": "E-Di thang tiep ve phia truoc",
-            "State": "lock",
+            "State": "complete",
             "Type": "moving",
             "Position": {
                 "x": 0.0,
@@ -214,7 +214,7 @@
             "Id": "116",
             "Title": "Quest 4",
             "Content": "E-Danh bai quai vat Boss 6 xuat hien",
-            "State": "lock",
+            "State": "complete",
             "Type": "attack",
             "Position": {
                 "x": 0.0,
@@ -228,7 +228,7 @@
             "Id": "017",
             "Title": "Quest 5",
             "Content": "E-Di vao cong khong gian 2",
-            "State": "lock",
+            "State": "complete",
             "Type": "moving",
             "Position": {
                 "x": -12.0,
@@ -242,7 +242,7 @@
             "Id": "018",
             "Title": "Quest 5",
             "Content": "E-Di thang ve phia truoc",
-            "State": "lock",
+            "State": "doing",
             "Type": "moving",
             "Position": {
                 "x": -8.300000190734864,
