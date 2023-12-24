@@ -60,10 +60,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || _playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Grapple"))
+        {
+            _walkSound.enabled = false;
+            _runSound.enabled = false;
+        }
+
         if (_isMovePressed && _isRunPressed)
         {
             _walkSound.enabled = false;
-            _runSound.enabled = true;
+            if (!_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Jump") && !_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Grapple"))
+            {
+                _runSound.enabled = true;
+            }
             Move(_runSpeed);
             if (_playerAnimator.GetFloat(_movementParameterHash) < 1f)
             {
@@ -74,7 +83,10 @@ public class PlayerMovement : MonoBehaviour
         else if (_isMovePressed)
         {
             _runSound.enabled = false;
-            _walkSound.enabled = true;
+            if (!_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Jump") && !_playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Grapple"))
+            {
+                _walkSound.enabled = true;
+            }
             Move(_walkSpeed);
 
             if (_playerAnimator.GetFloat(_movementParameterHash) < 0.5f)
