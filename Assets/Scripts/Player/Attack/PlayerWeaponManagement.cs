@@ -65,6 +65,8 @@ public class PlayerWeaponManagement : MonoBehaviour
             {
                 _playerAnimator.SetLayerWeight(i, 0);
             }
+
+            StartCoroutine(DisplayNothing());
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -72,6 +74,8 @@ public class PlayerWeaponManagement : MonoBehaviour
             _isAxeEquip = true;
             _isSwordEquip = false;
             _playerAxe.SetAnimatorLayer();
+
+            StartCoroutine(DisplayAxe());
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -79,6 +83,8 @@ public class PlayerWeaponManagement : MonoBehaviour
             _isAxeEquip = false;
             _isSwordEquip = true;
             _playerSword.SetAnimatorLayer();
+
+            StartCoroutine(DisplaySword());
         }
     }
 
@@ -174,6 +180,61 @@ public class PlayerWeaponManagement : MonoBehaviour
     private void OnBlockSkillStart(InputAction.CallbackContext context)
     {
         _playerShield.BlockSkillStartTime = _playerShield.Block(_playerShield.BlockSkill, _playerShield.BlockSkillStartTime);
+    }
+
+    //
+    IEnumerator DisplaySword()
+    {
+        GameObject axeSlot = GameObject.FindWithTag("AxeSlot");
+        GameObject swordSlot = GameObject.FindWithTag("SwordSlot");
+
+        while (axeSlot.transform.GetChild(0).localScale.x > 0)
+        {
+            axeSlot.transform.GetChild(0).localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        while (swordSlot.transform.GetChild(0).localScale.x < 1)
+        {
+            swordSlot.transform.GetChild(0).localScale += new Vector3(0.1f, 0.1f, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+    IEnumerator DisplayAxe()
+    {
+        GameObject axeSlot = GameObject.FindWithTag("AxeSlot");
+        GameObject swordSlot = GameObject.FindWithTag("SwordSlot");
+
+        while (swordSlot.transform.GetChild(0).localScale.x > 0)
+        {
+            swordSlot.transform.GetChild(0).localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        while (axeSlot.transform.GetChild(0).localScale.x < 1)
+        {
+            axeSlot.transform.GetChild(0).localScale += new Vector3(0.1f, 0.1f, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        } 
+    }
+
+    IEnumerator DisplayNothing()
+    {
+        GameObject axeSlot = GameObject.FindWithTag("AxeSlot");
+        GameObject swordSlot = GameObject.FindWithTag("SwordSlot");
+
+        while (swordSlot.transform.GetChild(0).localScale.x > 0)
+        {
+            swordSlot.transform.GetChild(0).localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        while (axeSlot.transform.GetChild(0).localScale.x > 0)
+        {
+            axeSlot.transform.GetChild(0).localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 
 }

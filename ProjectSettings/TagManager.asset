@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - MeleeEnemySkill
   - DefeatUI
+  - SwordSlot
+  - AxeSlot
   layers:
   - Default
   - TransparentFX
