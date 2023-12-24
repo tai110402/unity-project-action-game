@@ -119,7 +119,7 @@ public class Boss1Skill : MonoBehaviour
             _boss1Animator.CrossFade("FirstSkill", 0f);
             _firstSkillStartTime = Time.time;
             yield return new WaitForSeconds(0.5f);
-            _firstSkillVFX.transform.position = transform.position;
+            _firstSkillVFX.transform.position = transform.position + new Vector3 (0, 0.2f, 0);
             _firstSkillVFX.SetActive(true);
             yield return new WaitForSeconds(_firstSkillDuration);
             _firstSkillVFX.SetActive(false);

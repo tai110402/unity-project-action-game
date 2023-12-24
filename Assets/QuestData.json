@@ -3,7 +3,7 @@
         {
             "Id": "start",
             "Title": "Quest 1",
-            "Content": "C-Buoc tiep de bat dau",
+            "Content": "E-Buoc tiep de bat dau",
             "State": "doing",
             "Type": "moving",
             "Position": {
@@ -17,7 +17,7 @@
         {
             "Id": "axe",
             "Title": "Quest 1",
-            "Content": "C-Learning Axe Skill",
+            "Content": "E-Learning Axe Skill",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -31,7 +31,7 @@
         {
             "Id": "sword",
             "Title": "Quest 1",
-            "Content": "C-Learning Sword Skill",
+            "Content": "E-Learning Sword Skill",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -45,7 +45,7 @@
         {
             "Id": "shield",
             "Title": "Quest 1",
-            "Content": "C-Learning Shield Skill",
+            "Content": "E-Learning Shield Skill",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -59,8 +59,8 @@
         {
             "Id": "001",
             "Title": "Quest 1",
-            "Content": "C-Di den nga 3 dau tien",
-            "State": "doing",
+            "Content": "E-Di den nga 3 dau tien",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 11.0,
@@ -71,9 +71,9 @@
             "Condition": 0
         },
         {
-            "Id": "202",
+            "Id": "102",
             "Title": "Quest 2",
-            "Content": "C-Danh bai quai vat xuat hien",
+            "Content": "E-Danh bai quai vat xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -82,12 +82,12 @@
                 "z": 24.0
             },
             "Progress": 0,
-            "Condition": 3
+            "Condition": 2
         },
         {
             "Id": "003",
             "Title": "Quest 3",
-            "Content": "C-Di tiep ve ben phai",
+            "Content": "E-Di tiep ve ben phai",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -99,9 +99,9 @@
             "Condition": 0
         },
         {
-            "Id": "204",
+            "Id": "104",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 2 xuat hien",
+            "Content": "E-Danh bai quai vat 2 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -110,12 +110,12 @@
                 "z": 18.0
             },
             "Progress": 0,
-            "Condition": 3
+            "Condition": 2
         },
         {
             "Id": "005",
             "Title": "Quest 5",
-            "Content": "C-Di ve nga 3",
+            "Content": "E-Di ve nga 3",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -129,7 +129,7 @@
         {
             "Id": "006",
             "Title": "Quest 5",
-            "Content": "C-Di thang den chan cau",
+            "Content": "E-Di thang den chan cau",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -143,7 +143,7 @@
         {
             "Id": "007",
             "Title": "Quest 5",
-            "Content": "C-Den ben kia cau",
+            "Content": "E-Den ben kia cau",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -157,7 +157,7 @@
         {
             "Id": "008",
             "Title": "Quest 5",
-            "Content": "C-Di den bo song",
+            "Content": "E-Di den bo song",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -169,9 +169,9 @@
             "Condition": 0
         },
         {
-            "Id": "209",
+            "Id": "109",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 3 xuat hien",
+            "Content": "E-Danh bai quai vat 3 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -180,12 +180,12 @@
                 "z": 107.0
             },
             "Progress": 0,
-            "Condition": 5
+            "Condition": 4
         },
         {
             "Id": "010",
             "Title": "Quest 5",
-            "Content": "C-Di den hang dong",
+            "Content": "E-Di den hang dong",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -197,9 +197,9 @@
             "Condition": 0
         },
         {
-            "Id": "211",
+            "Id": "111",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 4 xuat hien",
+            "Content": "E-Danh bai quai vat 4 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -208,12 +208,12 @@
                 "z": 154.0
             },
             "Progress": 0,
-            "Condition": 5
+            "Condition": 4
         },
         {
             "Id": "012",
             "Title": "Quest 5",
-            "Content": "C-Di vao cong khong gian",
+            "Content": "E-Di vao cong khong gian",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -269,35 +269,35 @@
         {
             "Id": "013",
             "Title": "Quest 5",
-            "Content": "C-Di thang ve phia truoc",
+            "Content": "E-Di thang ve phia truoc",
             "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 0.0,
                 "y": 0.25,
-                "z": 6.0
+                "z": 11.0
             },
             "Progress": 0,
             "Condition": 0
         },
         {
-            "Id": "214",
+            "Id": "114",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 5 xuat hien",
+            "Content": "E-Danh bai quai vat 5 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
                 "x": 0.0,
                 "y": 0.25,
-                "z": 6.0
+                "z": 11.0
             },
             "Progress": 0,
-            "Condition": 3
+            "Condition": 2
         },
         {
             "Id": "015",
             "Title": "Quest 5",
-            "Content": "C-Di thang tiep ve phia truoc",
+            "Content": "E-Di thang tiep ve phia truoc",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -309,9 +309,9 @@
             "Condition": 0
         },
         {
-            "Id": "216",
+            "Id": "116",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat Boss 6 xuat hien",
+            "Content": "E-Danh bai quai vat Boss 6 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -320,12 +320,12 @@
                 "z": 30.0
             },
             "Progress": 0,
-            "Condition": 3
+            "Condition": 1
         },
         {
             "Id": "017",
             "Title": "Quest 5",
-            "Content": "C-Di vao cong khong gian 2",
+            "Content": "E-Di vao cong khong gian 2",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -344,7 +344,7 @@
             "Type": "moving",
             "Position": {
                 "x": 0.949999988079071,
-                "y": 0.949999988079071,
+                "y": 0.75,
                 "z": 3.3499999046325685
             },
             "Progress": 0,
@@ -358,7 +358,7 @@
             "Type": "moving",
             "Position": {
                 "x": 1.0,
-                "y": 0.949999988079071,
+                "y": 0.75,
                 "z": 6.460000038146973
             },
             "Progress": 0,
@@ -367,7 +367,7 @@
         {
             "Id": "018",
             "Title": "Quest 5",
-            "Content": "C-Di thang ve phia truoc",
+            "Content": "E-Di thang ve phia truoc",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -379,9 +379,9 @@
             "Condition": 0
         },
         {
-            "Id": "219",
+            "Id": "119",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 7 xuat hien",
+            "Content": "E-Danh bai quai vat 7 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -390,12 +390,12 @@
                 "z": -2.359999895095825
             },
             "Progress": 0,
-            "Condition": 2
+            "Condition": 1
         },
         {
             "Id": "020",
             "Title": "Quest 5",
-            "Content": "C-Tiep tuc di thang ve phia truoc",
+            "Content": "E-Tiep tuc di thang ve phia truoc",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -407,9 +407,9 @@
             "Condition": 0
         },
         {
-            "Id": "221",
+            "Id": "121",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 8 xuat hien",
+            "Content": "E-Danh bai quai vat 8 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -423,7 +423,7 @@
         {
             "Id": "022",
             "Title": "Quest 5",
-            "Content": "C-Di den cong da",
+            "Content": "E-Di den cong da",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -435,9 +435,9 @@
             "Condition": 0
         },
         {
-            "Id": "223",
+            "Id": "123",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 9 xuat hien",
+            "Content": "E-Danh bai quai vat 9 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -451,7 +451,7 @@
         {
             "Id": "024",
             "Title": "Quest 5",
-            "Content": "C-Qua cong da leo len ngon doi ben trai",
+            "Content": "E-Qua cong da leo len ngon doi ben trai",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -463,9 +463,9 @@
             "Condition": 0
         },
         {
-            "Id": "225",
+            "Id": "125",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 10 xuat hien",
+            "Content": "E-Danh bai quai vat 10 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -479,7 +479,7 @@
         {
             "Id": "026",
             "Title": "Quest 5",
-            "Content": "C-Di den ngoi doi doi dien",
+            "Content": "E-Di den ngoi doi doi dien",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -491,9 +491,9 @@
             "Condition": 0
         },
         {
-            "Id": "227",
+            "Id": "127",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat 11 xuat hien",
+            "Content": "E-Danh bai quai vat 11 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -507,7 +507,7 @@
         {
             "Id": "028",
             "Title": "Quest 5",
-            "Content": "C-Di len ngon nui cao nhat",
+            "Content": "E-Di len ngon nui cao nhat",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -519,9 +519,9 @@
             "Condition": 0
         },
         {
-            "Id": "229",
+            "Id": "129",
             "Title": "Quest 4",
-            "Content": "C-Danh bai quai vat canh cong 11 xuat hien",
+            "Content": "E-Danh bai quai vat canh cong 12 xuat hien",
             "State": "lock",
             "Type": "attack",
             "Position": {
@@ -530,12 +530,12 @@
                 "z": 104.68000030517578
             },
             "Progress": 0,
-            "Condition": 5
+            "Condition": 4
         },
         {
             "Id": "030",
             "Title": "Quest 5",
-            "Content": "C-Di vao cong khong gian",
+            "Content": "E-Di vao cong khong gian",
             "State": "lock",
             "Type": "moving",
             "Position": {
@@ -547,18 +547,144 @@
             "Condition": 0
         },
         {
-            "Id": "013",
+            "Id": "031",
             "Title": "Quest 5",
-            "Content": "C-Di thang ve phia truoc",
+            "Content": "E-Di thang ve phia truoc",
             "State": "lock",
             "Type": "moving",
             "Position": {
-                "x": 0.0,
-                "y": 0.25,
-                "z": 6.0
+                "x": 8.0,
+                "y": 1.0,
+                "z": 9.0
             },
             "Progress": 0,
             "Condition": 0
+        },
+        {
+            "Id": "132",
+            "Title": "Quest 4",
+            "Content": "E-Danh bai quai vat 13 xuat hien",
+            "State": "lock",
+            "Type": "attack",
+            "Position": {
+                "x": 8.0,
+                "y": 1.0,
+                "z": 9.0
+            },
+            "Progress": 0,
+            "Condition": 5
+        },
+        {
+            "Id": "033",
+            "Title": "Quest 5",
+            "Content": "E-Leo len vung dat ben phai",
+            "State": "lock",
+            "Type": "moving",
+            "Position": {
+                "x": 39.0,
+                "y": 7.440000057220459,
+                "z": 8.5
+            },
+            "Progress": 0,
+            "Condition": 0
+        },
+        {
+            "Id": "134",
+            "Title": "Quest 4",
+            "Content": "E-Danh bai quai vat 14 xuat hien",
+            "State": "lock",
+            "Type": "attack",
+            "Position": {
+                "x": 39.0,
+                "y": 7.440000057220459,
+                "z": 8.5
+            },
+            "Progress": 0,
+            "Condition": 4
+        },
+        {
+            "Id": "035",
+            "Title": "Quest 5",
+            "Content": "E-Bay len vung dat phia truoc",
+            "State": "lock",
+            "Type": "moving",
+            "Position": {
+                "x": 85.0,
+                "y": 22.299999237060548,
+                "z": 38.0
+            },
+            "Progress": 0,
+            "Condition": 0
+        },
+        {
+            "Id": "136",
+            "Title": "Quest 4",
+            "Content": "E-Danh bai quai vat 15 xuat hien",
+            "State": "lock",
+            "Type": "attack",
+            "Position": {
+                "x": 85.0,
+                "y": 22.299999237060548,
+                "z": 38.0
+            },
+            "Progress": 0,
+            "Condition": 2
+        },
+        {
+            "Id": "037",
+            "Title": "Quest 5",
+            "Content": "E-Di len vung dat cao nhat",
+            "State": "lock",
+            "Type": "moving",
+            "Position": {
+                "x": 65.4000015258789,
+                "y": 51.5,
+                "z": 68.5
+            },
+            "Progress": 0,
+            "Condition": 0
+        },
+        {
+            "Id": "138",
+            "Title": "Quest 4",
+            "Content": "E-Danh bai quai vat 16 xuat hien",
+            "State": "lock",
+            "Type": "attack",
+            "Position": {
+                "x": 65.4000015258789,
+                "y": 51.5,
+                "z": 68.5
+            },
+            "Progress": 0,
+            "Condition": 3
+        },
+        {
+            "Id": "039",
+            "Title": "Quest 5",
+            "Content": "E-Di len vung dat cao nhat",
+            "State": "lock",
+            "Type": "moving",
+            "Position": {
+                "x": 65.4000015258789,
+                "y": 51.5,
+                "z": 84.0
+            },
+            "Progress": 0,
+            "Condition": 0
+        },
+        {
+            "Id": "140",
+            "Title": "Quest 4",
+            "Content": "E-Danh bai quai vat 16 Boss xuat hien",
+            "State": "lock",
+            "Type": "attack",
+            "Position": {
+                "x": 65.4000015258789,
+                "y": 51.5,
+                "z": 84.0
+            },
+            "Progress": 0,
+            "Condition": 1
         },
         {
             "Id": "100",

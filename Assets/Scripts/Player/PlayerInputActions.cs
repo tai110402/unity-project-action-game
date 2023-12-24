@@ -326,6 +326,33 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Unequip"",
+                    ""type"": ""Button"",
+                    ""id"": ""f335e25b-6430-479b-bb0d-67563c9be68e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EquipAxe"",
+                    ""type"": ""Button"",
+                    ""id"": ""facfc36b-3ab3-4e65-bc3c-e7c12055c09f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EquipSword"",
+                    ""type"": ""Button"",
+                    ""id"": ""a984356c-e5f7-41bc-83dc-d739fc01639b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -383,6 +410,39 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""ThirdSkill"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2964f633-17c5-4630-9c77-288bf4367544"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Unequip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""959de104-07f5-41cf-949c-0bad13366f12"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EquipAxe"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f44da037-3511-42c7-af55-cfc4ae0811b8"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EquipSword"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -407,6 +467,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_AttackManagement_FirstSkill = m_AttackManagement.FindAction("FirstSkill", throwIfNotFound: true);
         m_AttackManagement_SecondSkill = m_AttackManagement.FindAction("SecondSkill", throwIfNotFound: true);
         m_AttackManagement_ThirdSkill = m_AttackManagement.FindAction("ThirdSkill", throwIfNotFound: true);
+        m_AttackManagement_Unequip = m_AttackManagement.FindAction("Unequip", throwIfNotFound: true);
+        m_AttackManagement_EquipAxe = m_AttackManagement.FindAction("EquipAxe", throwIfNotFound: true);
+        m_AttackManagement_EquipSword = m_AttackManagement.FindAction("EquipSword", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -605,6 +668,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_AttackManagement_FirstSkill;
     private readonly InputAction m_AttackManagement_SecondSkill;
     private readonly InputAction m_AttackManagement_ThirdSkill;
+    private readonly InputAction m_AttackManagement_Unequip;
+    private readonly InputAction m_AttackManagement_EquipAxe;
+    private readonly InputAction m_AttackManagement_EquipSword;
     public struct AttackManagementActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -614,6 +680,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @FirstSkill => m_Wrapper.m_AttackManagement_FirstSkill;
         public InputAction @SecondSkill => m_Wrapper.m_AttackManagement_SecondSkill;
         public InputAction @ThirdSkill => m_Wrapper.m_AttackManagement_ThirdSkill;
+        public InputAction @Unequip => m_Wrapper.m_AttackManagement_Unequip;
+        public InputAction @EquipAxe => m_Wrapper.m_AttackManagement_EquipAxe;
+        public InputAction @EquipSword => m_Wrapper.m_AttackManagement_EquipSword;
         public InputActionMap Get() { return m_Wrapper.m_AttackManagement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -638,6 +707,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ThirdSkill.started += instance.OnThirdSkill;
             @ThirdSkill.performed += instance.OnThirdSkill;
             @ThirdSkill.canceled += instance.OnThirdSkill;
+            @Unequip.started += instance.OnUnequip;
+            @Unequip.performed += instance.OnUnequip;
+            @Unequip.canceled += instance.OnUnequip;
+            @EquipAxe.started += instance.OnEquipAxe;
+            @EquipAxe.performed += instance.OnEquipAxe;
+            @EquipAxe.canceled += instance.OnEquipAxe;
+            @EquipSword.started += instance.OnEquipSword;
+            @EquipSword.performed += instance.OnEquipSword;
+            @EquipSword.canceled += instance.OnEquipSword;
         }
 
         private void UnregisterCallbacks(IAttackManagementActions instance)
@@ -657,6 +735,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ThirdSkill.started -= instance.OnThirdSkill;
             @ThirdSkill.performed -= instance.OnThirdSkill;
             @ThirdSkill.canceled -= instance.OnThirdSkill;
+            @Unequip.started -= instance.OnUnequip;
+            @Unequip.performed -= instance.OnUnequip;
+            @Unequip.canceled -= instance.OnUnequip;
+            @EquipAxe.started -= instance.OnEquipAxe;
+            @EquipAxe.performed -= instance.OnEquipAxe;
+            @EquipAxe.canceled -= instance.OnEquipAxe;
+            @EquipSword.started -= instance.OnEquipSword;
+            @EquipSword.performed -= instance.OnEquipSword;
+            @EquipSword.canceled -= instance.OnEquipSword;
         }
 
         public void RemoveCallbacks(IAttackManagementActions instance)
@@ -694,5 +781,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnFirstSkill(InputAction.CallbackContext context);
         void OnSecondSkill(InputAction.CallbackContext context);
         void OnThirdSkill(InputAction.CallbackContext context);
+        void OnUnequip(InputAction.CallbackContext context);
+        void OnEquipAxe(InputAction.CallbackContext context);
+        void OnEquipSword(InputAction.CallbackContext context);
     }
 }

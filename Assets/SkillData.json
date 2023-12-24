@@ -99,11 +99,11 @@
         {
             "AnimationName": "DefaultFirstNormalSwordSkill",
             "TimeCoolDown": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                1.2000000476837159,
+                1.100000023841858,
+                1.0,
+                0.8999999761581421,
+                0.8999999761581421
             ],
             "SlashArray": [
                 {
@@ -147,11 +147,11 @@
         {
             "AnimationName": "DefaultSecondNormalSwordSkill",
             "TimeCoolDown": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                1.2000000476837159,
+                1.100000023841858,
+                1.0,
+                0.8999999761581421,
+                0.8999999761581421
             ],
             "SlashArray": [
                 {
@@ -662,11 +662,11 @@
         {
             "AnimationName": "DefaultFirstNormalAxeSkill",
             "TimeCoolDown": [
+                1.2000000476837159,
+                1.100000023841858,
                 1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0
+                0.8999999761581421,
+                0.8999999761581421
             ],
             "SlashArray": [
                 {
@@ -710,11 +710,11 @@
         {
             "AnimationName": "DefaultSecondNormalAxeSkill",
             "TimeCoolDown": [
+                1.2000000476837159,
+                1.100000023841858,
                 1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0
+                0.8999999761581421,
+                0.8999999761581421
             ],
             "SlashArray": [
                 {

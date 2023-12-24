@@ -51,41 +51,48 @@ public class PlayerWeaponManagement : MonoBehaviour
         _playerInputActions.AttackManagement.SecondSkill.started += OnSecondSkillStart;
         _playerInputActions.AttackManagement.ThirdSkill.started += OnThirdSkillStart;
         _playerInputActions.AttackManagement.BlockSkill.started += OnBlockSkillStart;
+        _playerInputActions.AttackManagement.Unequip.started += OnUnequipStart;
+        _playerInputActions.AttackManagement.EquipAxe.started += OnEquipAxeStart;
+        _playerInputActions.AttackManagement.EquipSword.started += OnEquipSwordStart;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            _isUnequip = true;
-            _isAxeEquip = false;
-            _isSwordEquip = false;
-            for (int i = 1; i < _playerAnimator.layerCount; i++)
-            {
-                _playerAnimator.SetLayerWeight(i, 0);
-            }
+        
+    }
 
-            StartCoroutine(DisplayNothing());
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+    private void OnUnequipStart(InputAction.CallbackContext context)
+    {
+        _isUnequip = true;
+        _isAxeEquip = false;
+        _isSwordEquip = false;
+        for (int i = 1; i < _playerAnimator.layerCount; i++)
         {
-            _isUnequip = false;
-            _isAxeEquip = true;
-            _isSwordEquip = false;
-            _playerAxe.SetAnimatorLayer();
-
-            StartCoroutine(DisplayAxe());
+            _playerAnimator.SetLayerWeight(i, 0);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            _isUnequip = false;
-            _isAxeEquip = false;
-            _isSwordEquip = true;
-            _playerSword.SetAnimatorLayer();
 
-            StartCoroutine(DisplaySword());
-        }
+        StartCoroutine(DisplayNothing());
+    }
+
+    private void OnEquipAxeStart(InputAction.CallbackContext context)
+    {
+        _isUnequip = false;
+        _isAxeEquip = true;
+        _isSwordEquip = false;
+        _playerAxe.SetAnimatorLayer();
+
+        StartCoroutine(DisplayAxe());
+    }
+
+    private void OnEquipSwordStart(InputAction.CallbackContext context)
+    {
+        _isUnequip = false;
+        _isAxeEquip = false;
+        _isSwordEquip = true;
+        _playerSword.SetAnimatorLayer();
+
+        StartCoroutine(DisplaySword());
     }
 
     private void OnNormalSkillStart(InputAction.CallbackContext context)
@@ -194,11 +201,15 @@ public class PlayerWeaponManagement : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
+        axeSlot.transform.GetChild(0).localScale = new Vector3(0, 0, 0);
+
         while (swordSlot.transform.GetChild(0).localScale.x < 1)
         {
             swordSlot.transform.GetChild(0).localScale += new Vector3(0.1f, 0.1f, 0.1f);
             yield return new WaitForSeconds(0.01f);
         }
+
+        swordSlot.transform.GetChild(0).localScale = new Vector3(1, 1, 1);
     }
 
     IEnumerator DisplayAxe()
@@ -212,11 +223,15 @@ public class PlayerWeaponManagement : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
+        swordSlot.transform.GetChild(0).localScale = new Vector3(0, 0, 0);
+
         while (axeSlot.transform.GetChild(0).localScale.x < 1)
         {
             axeSlot.transform.GetChild(0).localScale += new Vector3(0.1f, 0.1f, 0.1f);
             yield return new WaitForSeconds(0.01f);
-        } 
+        }
+
+        axeSlot.transform.GetChild(0).localScale = new Vector3(1, 1, 1);
     }
 
     IEnumerator DisplayNothing()
@@ -235,6 +250,9 @@ public class PlayerWeaponManagement : MonoBehaviour
             axeSlot.transform.GetChild(0).localScale -= new Vector3(0.1f, 0.1f, 0.1f);
             yield return new WaitForSeconds(0.01f);
         }
+
+        swordSlot.transform.GetChild(0).localScale = new Vector3(0, 0, 0);
+        axeSlot.transform.GetChild(0).localScale = new Vector3(0, 0, 0);
     }
 
 }
