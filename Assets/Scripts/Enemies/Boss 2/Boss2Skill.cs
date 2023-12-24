@@ -170,6 +170,6 @@ public class Boss2Skill : MonoBehaviour
     public void SpawnThirdSkillObject()
     {
         var damageObject = Instantiate(_thirdSkillGameObject, _thirdSkillGameObjectSpawnPoint.transform.position, _thirdSkillGameObjectSpawnPoint.transform.rotation);
-        Destroy(damageObject, 0.5f);
+        Destroy(damageObject, 0.3f);
     }
 }
