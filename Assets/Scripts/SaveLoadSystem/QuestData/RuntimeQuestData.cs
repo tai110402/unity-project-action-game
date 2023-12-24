@@ -37,8 +37,8 @@ public class RuntimeQuestData : MonoBehaviour
 
                     new Quest() {Id = "013" , State = "lock", Type = "moving", Position = new Vector3(0, 0.25f, 6),Title = "Quest 5", Content = "E-Di thang ve phia truoc" },
                     new Quest() {Id = "114" , State = "lock", Type = "attack", Position = new Vector3(0, 0.25f, 6), Progress = 0, Condition = 2, Title = "Quest 4", Content = "E-Danh bai quai vat 5 xuat hien"},
-                    new Quest() {Id = "015" , State = "lock", Type = "moving", Position = new Vector3(0, 0.25f, 16),Title = "Quest 5", Content = "E-Di thang tiep ve phia truoc" },
-                    new Quest() {Id = "116" , State = "lock", Type = "attack", Position = new Vector3(0, 0.25f, 18), Progress = 0, Condition = 1, Title = "Quest 4", Content = "E-Danh bai quai vat Boss 6 xuat hien"},
+                    new Quest() {Id = "015" , State = "lock", Type = "moving", Position = new Vector3(1.17f, 0.25f, 30),Title = "Quest 5", Content = "E-Di thang tiep ve phia truoc" },
+                    new Quest() {Id = "116" , State = "lock", Type = "attack", Position = new Vector3(1.17f, 0.25f, 30), Progress = 0, Condition = 1, Title = "Quest 4", Content = "E-Danh bai quai vat Boss 6 xuat hien"},
                     new Quest() {Id = "017" , State = "lock", Type = "moving", Position = new Vector3(-12, 0.25f, 25.5f),Title = "Quest 5", Content = "E-Di vao cong khong gian 2" },
 
                     new Quest() {Id = "018" , State = "lock", Type = "moving", Position = new Vector3(-8.3f, 0.36f, -2.36f),Title = "Quest 5", Content = "E-Di thang ve phia truoc" },
@@ -53,7 +53,7 @@ public class RuntimeQuestData : MonoBehaviour
                     new Quest() {Id = "127" , State = "lock", Type = "attack", Position = new Vector3(62.7f, 14.34f, 91.14f), Progress = 0, Condition = 3, Title = "Quest 4", Content = "E-Danh bai quai vat 11 xuat hien"},
                     new Quest() {Id = "028" , State = "lock", Type = "moving", Position = new Vector3(-9.84f, 41.07f, 104.68f),Title = "Quest 5", Content = "E-Di len ngon nui cao nhat" },
                     new Quest() {Id = "129" , State = "lock", Type = "attack", Position = new Vector3(-9.84f, 41.07f, 104.68f), Progress = 0, Condition = 4, Title = "Quest 4", Content = "E-Danh bai quai vat canh cong 11 xuat hien"},
-                    new Quest() {Id = "012" , State = "lock", Type = "moving", Position = new Vector3(-17.9f, 41, 89.5f),Title = "Quest 5", Content = "E-Di vao cong khong gian" },
+                    new Quest() {Id = "030" , State = "lock", Type = "moving", Position = new Vector3(-17.9f, 41, 89.5f),Title = "Quest 5", Content = "E-Di vao cong khong gian" },
 
                     new Quest() {Id = "013" , State = "lock", Type = "moving", Position = new Vector3(0, 0.25f, 6),Title = "Quest 5", Content = "E-Di thang ve phia truoc" },
 
@@ -80,11 +80,28 @@ public class RuntimeQuestData : MonoBehaviour
                     new Quest() {Id = "010" , State = "lock", Type = "moving", Position = new Vector3(69, 0.55f, 148.5f),Title = "Quest 5", Content = "C-Di den hang dong" },
                     new Quest() {Id = "211" , State = "lock", Type = "attack", Position = new Vector3(63, 0.5f, 146), Progress = 0, Condition = 5, Title = "Quest 4", Content = "C-Danh bai quai vat 4 xuat hien"},
                     new Quest() {Id = "012" , State = "lock", Type = "moving", Position = new Vector3(98.27f, 2.24f, 165.51f),Title = "Quest 5", Content = "C-Di vao cong khong gian" },
+
                     new Quest() {Id = "013" , State = "lock", Type = "moving", Position = new Vector3(0, 0.25f, 6),Title = "Quest 5", Content = "C-Di thang ve phia truoc" },
                     new Quest() {Id = "214" , State = "lock", Type = "attack", Position = new Vector3(0, 0.25f, 6), Progress = 0, Condition = 3, Title = "Quest 4", Content = "C-Danh bai quai vat 5 xuat hien"},
-                    new Quest() {Id = "015" , State = "lock", Type = "moving", Position = new Vector3(0, 0.25f, 16),Title = "Quest 5", Content = "C-Di thang tiep ve phia truoc" },
-                    new Quest() {Id = "216" , State = "lock", Type = "attack", Position = new Vector3(0, 0.25f, 18), Progress = 0, Condition = 3, Title = "Quest 4", Content = "C-Danh bai quai vat Boss 6 xuat hien"},
+                    new Quest() {Id = "015" , State = "lock", Type = "moving", Position = new Vector3(1.17f, 0.25f, 30),Title = "Quest 5", Content = "C-Di thang tiep ve phia truoc" },
+                    new Quest() {Id = "216" , State = "lock", Type = "attack", Position = new Vector3(1.17f, 0.25f, 30), Progress = 0, Condition = 3, Title = "Quest 4", Content = "C-Danh bai quai vat Boss 6 xuat hien"},
                     new Quest() {Id = "017" , State = "lock", Type = "moving", Position = new Vector3(-12, 0.25f, 25.5f),Title = "Quest 5", Content = "C-Di vao cong khong gian 2" },
+
+                    new Quest() {Id = "018" , State = "lock", Type = "moving", Position = new Vector3(-8.3f, 0.36f, -2.36f),Title = "Quest 5", Content = "E-Di thang ve phia truoc" },
+                    new Quest() {Id = "219" , State = "lock", Type = "attack", Position = new Vector3(-8.3f, 0.36f, -2.36f), Progress = 0, Condition = 1, Title = "Quest 4", Content = "E-Danh bai quai vat 7 xuat hien"},
+                    new Quest() {Id = "020" , State = "lock", Type = "moving", Position = new Vector3(-47f, 0.36f, -10.5f),Title = "Quest 5", Content = "E-Tiep tuc di thang ve phia truoc" },
+                    new Quest() {Id = "221" , State = "lock", Type = "attack", Position = new Vector3(-47f, 0.36f, -10.5f), Progress = 0, Condition = 2, Title = "Quest 4", Content = "E-Danh bai quai vat 8 xuat hien"},
+                    new Quest() {Id = "022" , State = "lock", Type = "moving", Position = new Vector3(-24f, 0.36f, 30.6f),Title = "Quest 5", Content = "E-Di den cong da" },
+                    new Quest() {Id = "223" , State = "lock", Type = "attack", Position = new Vector3(-24f, 0.36f, 30.6f), Progress = 0, Condition = 4, Title = "Quest 4", Content = "E-Danh bai quai vat 9 xuat hien"},
+                    new Quest() {Id = "024" , State = "lock", Type = "moving", Position = new Vector3(36.7f, 8.75f, 61f),Title = "Quest 5", Content = "E-Qua cong da leo len ngon doi ben trai" },
+                    new Quest() {Id = "225" , State = "lock", Type = "attack", Position = new Vector3(36.7f, 8.75f, 61f), Progress = 0, Condition = 3, Title = "Quest 4", Content = "E-Danh bai quai vat 10 xuat hien"},
+                    new Quest() {Id = "026" , State = "lock", Type = "moving", Position = new Vector3(62.7f, 14.34f, 91.14f),Title = "Quest 5", Content = "E-Di den ngoi doi doi dien" },
+                    new Quest() {Id = "227" , State = "lock", Type = "attack", Position = new Vector3(62.7f, 14.34f, 91.14f), Progress = 0, Condition = 3, Title = "Quest 4", Content = "E-Danh bai quai vat 11 xuat hien"},
+                    new Quest() {Id = "028" , State = "lock", Type = "moving", Position = new Vector3(-9.84f, 41.07f, 104.68f),Title = "Quest 5", Content = "E-Di len ngon nui cao nhat" },
+                    new Quest() {Id = "229" , State = "lock", Type = "attack", Position = new Vector3(-9.84f, 41.07f, 104.68f), Progress = 0, Condition = 4, Title = "Quest 4", Content = "E-Danh bai quai vat canh cong 11 xuat hien"},
+                    new Quest() {Id = "030" , State = "lock", Type = "moving", Position = new Vector3(-17.9f, 41, 89.5f),Title = "Quest 5", Content = "E-Di vao cong khong gian" },
+
+                    new Quest() {Id = "013" , State = "lock", Type = "moving", Position = new Vector3(0, 0.25f, 6),Title = "Quest 5", Content = "E-Di thang ve phia truoc" },
 
                     new Quest() {Id = "100" , State = "lock", Type = "moving", Position = new Vector3(111, 111, 111) ,Title = "Quest 5", Content = "Complete Quest"},
 
