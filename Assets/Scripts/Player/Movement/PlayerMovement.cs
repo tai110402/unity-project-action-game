@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Sounds")]
     [SerializeField] private AudioSource _walkSound;
+    [SerializeField] private AudioSource _runSound;
     // Player Component
     private CharacterController _characterController;
     private Animator _playerAnimator;
@@ -61,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_isMovePressed && _isRunPressed)
         {
+            _walkSound.enabled = false;
+            _runSound.enabled = true;
             Move(_runSpeed);
             if (_playerAnimator.GetFloat(_movementParameterHash) < 1f)
             {
@@ -70,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (_isMovePressed)
         {
+            _runSound.enabled = false;
             _walkSound.enabled = true;
             Move(_walkSpeed);
 
@@ -87,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         } else
         {
             _walkSound.enabled = false;
+            _runSound.enabled = false;
             if (_currentSpeed > 0f)
             {
                 _currentSpeed = 0f;

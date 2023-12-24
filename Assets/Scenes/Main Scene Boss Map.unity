@@ -738,7 +738,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill003
   _indexOfSlash: 2
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &19978077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1654,7 +1654,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: ThirdSwordSkill002
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &32669638
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6248,7 +6248,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill002
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &176591929
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6409,7 +6409,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: DefaultSecondNormalSwordSkill
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &178495479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15851,7 +15851,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill001
   _indexOfSlash: 2
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &455663700
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23067,7 +23067,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: FirstSwordSkill001
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &702030945
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26525,7 +26525,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill002
   _indexOfSlash: 2
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &807691291
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31125,7 +31125,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill003
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &920260132
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32188,7 +32188,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: ThirdSwordSkill002
   _indexOfSlash: 1
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &947056655
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37587,7 +37587,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: ThirdSwordSkill001
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1065753563
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40170,7 +40170,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: FirstSwordSkill003
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1140433070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42555,7 +42555,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: FirstSwordSkill002
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1193343690
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43704,7 +43704,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill001
   _indexOfSlash: 1
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1242679308
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43951,7 +43951,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill003
   _indexOfSlash: 1
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1247058683
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48625,7 +48625,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: ThirdSwordSkill003
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1376034772
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53917,7 +53917,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill002
   _indexOfSlash: 1
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1513769673
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -56795,7 +56795,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: DefaultFirstNormalSwordSkill
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1580127322
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -60246,6 +60246,73 @@ MonoBehaviour:
   _timeAppearArray:
   - 0.3
   - 4
+--- !u!1001 &1673362210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.233715
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 70.84714
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 323.54208
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088933, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067192552877088955, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+      propertyPath: m_Name
+      value: ---------Sounds---------
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+--- !u!82 &1673362211 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8067192552887702606, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+  m_PrefabInstance: {fileID: 1673362210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1673362212 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8067192554471675549, guid: de15faf463b4a3d479503e1a261f1d8f, type: 3}
+  m_PrefabInstance: {fileID: 1673362210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1674647405
 GameObject:
   m_ObjectHideFlags: 0
@@ -60345,6 +60412,8 @@ MonoBehaviour:
   _minYVelocity: -15
   _maxYVelocity: 100
   _distanceToCheckIsGrounded: 0.1
+  _walkSound: {fileID: 1673362212}
+  _runSound: {fileID: 1673362211}
 --- !u!114 &1676849264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62236,7 +62305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questIdArray:
-  - 107
+  - 017
   _port: {fileID: 906788632}
 --- !u!1 &1727336454
 GameObject:
@@ -67088,7 +67157,7 @@ MonoBehaviour:
   _damage: 0
   _skillName: SecondSwordSkill001
   _indexOfSlash: 0
-  _indexOfWeapon: 2
+  _indexOfWeapon: 1
 --- !u!54 &1853217821
 Rigidbody:
   m_ObjectHideFlags: 0
