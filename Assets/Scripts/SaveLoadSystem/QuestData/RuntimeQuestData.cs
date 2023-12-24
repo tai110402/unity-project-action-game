@@ -25,7 +25,7 @@ public class RuntimeQuestData : MonoBehaviour
             Quests = new Quest[] { new Quest() {Id = "start" , State = "doing", Type = "moving", Position = new Vector3(0.52f, 0.1f, 1.2f),Title = "Quest 1", Content = "E-Buoc tiep de bat dau"},
                     new Quest() {Id = "axe" , State = "lock", Type = "moving", Position = new Vector3(0.95f, 0.75f, 3.35f),Title = "Quest 1", Content = "E-Learning Axe Skill"},
                     new Quest() {Id = "sword" , State = "lock", Type = "moving", Position = new Vector3(1, 0.75f, 6.46f),Title = "Quest 1", Content = "E-Learning Sword Skill"},
-                    new Quest() {Id = "shield" , State = "lock", Type = "moving", Position = new Vector3(1.28f, 0.75f, 9.21f),Title = "Quest 1", Content = "E-Learning Sword Skill"},
+                    new Quest() {Id = "shield" , State = "lock", Type = "moving", Position = new Vector3(1.28f, 0.75f, 9.21f),Title = "Quest 1", Content = "E-Learning Shield Skill"},
                    
                     new Quest() {Id = "001" , State = "lock", Type = "moving", Position = new Vector3(11, 0.74f, 24),Title = "Quest 1", Content = "E-Di den nga 3 dau tien"},
                     new Quest() {Id = "102" , State = "lock", Type = "attack", Position = new Vector3(11, 0.74f, 24), Progress = 0, Condition = 2 , Title = "Quest 2", Content = "E-Danh bai quai vat xuat hien"},
@@ -40,11 +40,19 @@ public class RuntimeQuestData : MonoBehaviour
                     new Quest() {Id = "111" , State = "lock", Type = "attack", Position = new Vector3(63, 0.5f, 154), Progress = 0, Condition = 4, Title = "Quest 4", Content = "E-Danh bai quai vat 4 xuat hien"},
                     new Quest() {Id = "012" , State = "lock", Type = "moving", Position = new Vector3(98.27f, 2.24f, 173.51f),Title = "Quest 5", Content = "E-Di vao cong khong gian" },
 
+                    new Quest() {Id = "axe" , State = "lock", Type = "moving", Position = new Vector3(0.95f, 0.75f, 3.35f),Title = "Quest 1", Content = "E-Learning New Axe Skill"},
+                    new Quest() {Id = "sword" , State = "lock", Type = "moving", Position = new Vector3(1, 0.75f, 6.46f),Title = "Quest 1", Content = "E-Learning New Sword Skill"},
+                    new Quest() {Id = "shield" , State = "lock", Type = "moving", Position = new Vector3(1.28f, 0.75f, 9.21f),Title = "Quest 1", Content = "E-Learning New Shield Skill"},
+
                     new Quest() {Id = "013" , State = "lock", Type = "moving", Position = new Vector3(0, 0.25f, 6),Title = "Quest 5", Content = "E-Di thang ve phia truoc" },
                     new Quest() {Id = "114" , State = "lock", Type = "attack", Position = new Vector3(0, 0.25f, 6), Progress = 0, Condition = 2, Title = "Quest 4", Content = "E-Danh bai quai vat 5 xuat hien"},
                     new Quest() {Id = "015" , State = "lock", Type = "moving", Position = new Vector3(1.17f, 0.25f, 30),Title = "Quest 5", Content = "E-Di thang tiep ve phia truoc" },
                     new Quest() {Id = "116" , State = "lock", Type = "attack", Position = new Vector3(1.17f, 0.25f, 30), Progress = 0, Condition = 1, Title = "Quest 4", Content = "E-Danh bai quai vat Boss 6 xuat hien"},
                     new Quest() {Id = "017" , State = "lock", Type = "moving", Position = new Vector3(-12, 0.25f, 25.5f),Title = "Quest 5", Content = "E-Di vao cong khong gian 2" },
+
+                    new Quest() {Id = "axe" , State = "lock", Type = "moving", Position = new Vector3(0.95f, 0.75f, 3.35f),Title = "Quest 1", Content = "E-Learning New Axe Skill"},
+                    new Quest() {Id = "sword" , State = "lock", Type = "moving", Position = new Vector3(1, 0.75f, 6.46f),Title = "Quest 1", Content = "E-Learning New Sword Skill"},
+                    //new Quest() {Id = "shield" , State = "lock", Type = "moving", Position = new Vector3(1.28f, 0.75f, 9.21f),Title = "Quest 1", Content = "E-Learning New Shield Skill"},
 
                     new Quest() {Id = "018" , State = "lock", Type = "moving", Position = new Vector3(-8.3f, 0.36f, -2.36f),Title = "Quest 5", Content = "E-Di thang ve phia truoc" },
                     new Quest() {Id = "119" , State = "lock", Type = "attack", Position = new Vector3(-8.3f, 0.36f, -2.36f), Progress = 0, Condition = 1, Title = "Quest 4", Content = "E-Danh bai quai vat 7 xuat hien"},
@@ -76,7 +84,7 @@ public class RuntimeQuestData : MonoBehaviour
             Quests = new Quest[] { new Quest() {Id = "start" , State = "doing", Type = "moving", Position = new Vector3(0.52f, 0.1f, 1.2f),Title = "Quest 1", Content = "C-Buoc tiep de bat dau"},
                     new Quest() {Id = "axe" , State = "lock", Type = "moving", Position = new Vector3(0.95f, 0.75f, 3.35f),Title = "Quest 1", Content = "C-Learning Axe Skill"},
                     new Quest() {Id = "sword" , State = "lock", Type = "moving", Position = new Vector3(1, 0.75f, 6.46f),Title = "Quest 1", Content = "C-Learning Sword Skill"},
-                    new Quest() {Id = "shield" , State = "lock", Type = "moving", Position = new Vector3(1.28f, 0.75f, 9.21f),Title = "Quest 1", Content = "C-Learning Sword Skill"},
+                    new Quest() {Id = "shield" , State = "lock", Type = "moving", Position = new Vector3(1.28f, 0.75f, 9.21f),Title = "Quest 1", Content = "C-Learning Shield Skill"},
 
                     new Quest() {Id = "001" , State = "doing", Type = "moving", Position = new Vector3(11, 0.74f, 24),Title = "Quest 1", Content = "C-Di den nga 3 dau tien"},
                     new Quest() {Id = "202" , State = "lock", Type = "attack", Position = new Vector3(11, 0.74f, 24), Progress = 0, Condition = 3 , Title = "Quest 2", Content = "C-Danh bai quai vat xuat hien"},
@@ -91,11 +99,19 @@ public class RuntimeQuestData : MonoBehaviour
                     new Quest() {Id = "211" , State = "lock", Type = "attack", Position = new Vector3(63, 0.5f, 154), Progress = 0, Condition = 5, Title = "Quest 4", Content = "C-Danh bai quai vat 4 xuat hien"},
                     new Quest() {Id = "012" , State = "lock", Type = "moving", Position = new Vector3(98.27f, 2.24f, 173.51f),Title = "Quest 5", Content = "C-Di vao cong khong gian" },
 
+                    new Quest() {Id = "axe" , State = "lock", Type = "moving", Position = new Vector3(0.95f, 0.75f, 3.35f),Title = "Quest 1", Content = "E-Learning New Axe Skill"},
+                    new Quest() {Id = "sword" , State = "lock", Type = "moving", Position = new Vector3(1, 0.75f, 6.46f),Title = "Quest 1", Content = "E-Learning New Sword Skill"},
+                    new Quest() {Id = "shield" , State = "lock", Type = "moving", Position = new Vector3(1.28f, 0.75f, 9.21f),Title = "Quest 1", Content = "E-Learning New Shield Skill"},
+
                     new Quest() {Id = "013" , State = "lock", Type = "moving", Position = new Vector3(0, 0.25f, 6),Title = "Quest 5", Content = "C-Di thang ve phia truoc" },
                     new Quest() {Id = "214" , State = "lock", Type = "attack", Position = new Vector3(0, 0.25f, 6), Progress = 0, Condition = 3, Title = "Quest 4", Content = "C-Danh bai quai vat 5 xuat hien"},
                     new Quest() {Id = "015" , State = "lock", Type = "moving", Position = new Vector3(1.17f, 0.25f, 30),Title = "Quest 5", Content = "C-Di thang tiep ve phia truoc" },
                     new Quest() {Id = "216" , State = "lock", Type = "attack", Position = new Vector3(1.17f, 0.25f, 30), Progress = 0, Condition = 3, Title = "Quest 4", Content = "C-Danh bai quai vat Boss 6 xuat hien"},
                     new Quest() {Id = "017" , State = "lock", Type = "moving", Position = new Vector3(-12, 0.25f, 25.5f),Title = "Quest 5", Content = "C-Di vao cong khong gian 2" },
+
+                    new Quest() {Id = "axe" , State = "lock", Type = "moving", Position = new Vector3(0.95f, 0.95f, 3.35f),Title = "Quest 1", Content = "E-Learning New Axe Skill"},
+                    new Quest() {Id = "sword" , State = "lock", Type = "moving", Position = new Vector3(1, 0.95f, 6.46f),Title = "Quest 1", Content = "E-Learning New Sword Skill"},
+                    //new Quest() {Id = "shield" , State = "lock", Type = "moving", Position = new Vector3(1.28f, 0.95f, 9.21f),Title = "Quest 1", Content = "E-Learning New Shield Skill"},
 
                     new Quest() {Id = "018" , State = "lock", Type = "moving", Position = new Vector3(-8.3f, 0.36f, -2.36f),Title = "Quest 5", Content = "C-Di thang ve phia truoc" },
                     new Quest() {Id = "219" , State = "lock", Type = "attack", Position = new Vector3(-8.3f, 0.36f, -2.36f), Progress = 0, Condition = 2, Title = "Quest 4", Content = "C-Danh bai quai vat 7 xuat hien"},
