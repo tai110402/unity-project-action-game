@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RuntimeQuestData : MonoBehaviour
 {
-    private static bool _initializeData = false;
+    public static bool _initializeData = false;
     private static QuestData _questData;
     public static QuestData QuestData { get { return _questData; } set { _questData = value; } }
 

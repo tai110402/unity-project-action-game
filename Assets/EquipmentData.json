@@ -42,7 +42,7 @@
                 1000,
                 1000
             ],
-            "Level": 4,
+            "Level": 1,
             "MaxLevel": 4,
             "GoldToUpgradeLevel": [
                 30,
@@ -56,8 +56,8 @@
         "Armor": [
             100,
             200,
-            300,
-            400
+            400,
+            500
         ],
         "Level": 1,
         "MaxLevel": 4,

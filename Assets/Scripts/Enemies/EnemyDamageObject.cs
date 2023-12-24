@@ -22,8 +22,9 @@ public class EnemyDamageObject : MonoBehaviour
     {
         if (other.CompareTag("PlayerBox") && !_playerGameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("DefaultBlockSkill001") && !_playerGameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(1).IsName("DefaultBlockSkill001") && !_playerGameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(2).IsName("DefaultBlockSkill001"))
         {
-            RuntimePlayerData.PlayerData.CurrentHP -= _damage;
-            Debug.Log("damge");
+            int armor = RuntimeEquipmentData.EquipmentData.ArmorData.Armor[RuntimeEquipmentData.EquipmentData.ArmorData.Level-1];
+            Debug.Log(armor);
+            RuntimePlayerData.PlayerData.CurrentHP -= (_damage-(armor/100));
 
             if (_turnOnGetHitAnimation && (_playerGetHitAnimationName == "GetStrongHit" || _playerGetHitAnimationName == "GetHit"))
             {

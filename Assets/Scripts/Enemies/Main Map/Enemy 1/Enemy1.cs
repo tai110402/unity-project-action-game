@@ -8,7 +8,7 @@ public class Enemy1 : MonoBehaviour
     [SerializeField] private string _rangeAttackAnimationName = "RangeAttack";
     [SerializeField] private string _meleeAttackAnimationName = "MeleeAttack";
     [SerializeField] private GameObject _projectile;
-    [SerializeField] private float _projectileVelocity = 10f;
+    [SerializeField] private float _projectileVelocity = 600f;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Transform _target;
     [SerializeField] private float _rangeSkillCooldownTime = 3f;
@@ -37,7 +37,7 @@ public class Enemy1 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (_damageableObject.CurrentHealth >= 0 && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BlockedReaction") && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit"))
+        if (_damageableObject.CurrentHealth > 0 && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BlockedReaction") && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit"))
         {
             float distance = Vector3.Magnitude(_player.transform.position - transform.position);
 
@@ -101,27 +101,33 @@ public class Enemy1 : MonoBehaviour
 
     public void ThrowObject()
     {
-        Vector3 direction = ((_target.position + new Vector3(0, 1, 0)) - _spawnPoint.position).normalized;
+        float distance = Vector3.Magnitude(_player.transform.position - transform.position);
+        Vector3 direction = ((_target.position + new Vector3(0, 1.2f, 0)) - _spawnPoint.position).normalized;
+        //Vector3 direction = Vector3.Normalize(((_target.position + new Vector3(0, 1, 0)) - (transform.position + new Vector3(0, 1.5f, 0))));
         var projectile = Instantiate(_projectile, _spawnPoint.transform.position, _spawnPoint.transform.rotation);
-        projectile.GetComponent<Rigidbody>().velocity = direction * _projectileVelocity * Time.deltaTime;
+        projectile.GetComponent<Rigidbody>().velocity = direction * _projectileVelocity * 0.004f * distance;
         Destroy(projectile, 3f);
-
     }
 
     IEnumerator Excute()
     {
         var projectile = Instantiate(_projectile, _spawnPoint.transform.position, _spawnPoint.transform.rotation);
-        Vector3 c = _spawnPoint.position + (_target.position - _spawnPoint.position)/2 + new Vector3(0, 1f, 0);
+        projectile.transform.SetParent(null);
+        Vector3 c = (_target.position + _spawnPoint.position) / 2 + new Vector3(0, 3, 0);
         Vector3 target = _target.position;
         float t = 0f;
         while (t <= 1f)
         {
-            projectile.transform.position = Evaluate(t, target, c);
-            projectile.transform.up = Evaluate(t + 0.001f, target, c) - transform.position;
-            t += 0.02f;
-            yield return new WaitForSeconds(0.01f);
+            if (projectile != null)
+            {
+                projectile.transform.position = Evaluate(t, target, c);
+                //projectile.transform.up = Evaluate(t + 0.001f, target, c) - transform.position;
+                t += 0.08f;
+                yield return new WaitForSeconds(0.001f);
+            }
+            yield return null;
         }
-        // destroy this
+        Destroy(projectile);
     }
 
     private Vector3 Evaluate(float t, Vector3 target, Vector3 c)

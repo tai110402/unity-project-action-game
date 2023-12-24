@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class RuntimeSkillData: MonoBehaviour
 {
-    private static bool _initializeData = false;
+    public static bool _initializeData = false;
     private static Dictionary<string, Skill> _skillDictionary = new Dictionary<string, Skill>();
-    public static Dictionary<string, Skill> SkillDictionary {get { return _skillDictionary; } }
+    public static Dictionary<string, Skill> SkillDictionary {get { return _skillDictionary; } set { _skillDictionary = value; } }
 
     private void Awake()
     {

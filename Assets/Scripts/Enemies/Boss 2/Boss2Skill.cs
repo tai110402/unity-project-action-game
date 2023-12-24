@@ -47,7 +47,13 @@ public class Boss2Skill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_damageableObject.CurrentHealth >= 0 && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BlockedReaction"))
+        if (_damageableObject.CurrentHealth < _damageableObject.MaxHealth / 2 && !_isUsedIntrinsicSkill)
+        {
+            _isUsedIntrinsicSkill = true;
+            StartCoroutine(Intrinsic());
+        }
+
+        if (_damageableObject.CurrentHealth > 0 && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BlockedReaction") && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("IntrinsicSkill"))
         {
             if (!_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit") || (_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit") && _enemyAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.5f))
             {
@@ -98,11 +104,7 @@ public class Boss2Skill : MonoBehaviour
         }
 
 
-        if (_damageableObject.CurrentHealth < _damageableObject.MaxHealth / 2 && _isUsedIntrinsicSkill)
-        {
-            _isUsedIntrinsicSkill = true;
-            StartCoroutine(Intrinsic());
-        }
+        
         if (Input.GetKeyDown(KeyCode.V))
         {
             FirstSkill();

@@ -52,5 +52,8 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene(_indexOfMainScene);
     }
 
-
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

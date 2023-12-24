@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RuntimeEquipmentData : MonoBehaviour
 {
-    private static bool _initializeData = false;
+    public static bool _initializeData = false;
     private static EquipmentData _equipmentData;
     public static EquipmentData EquipmentData { set { _equipmentData = value; } get { return _equipmentData; } }
 
@@ -22,7 +22,7 @@ public class RuntimeEquipmentData : MonoBehaviour
     {
         _equipmentData = new EquipmentData()
         {
-            ArmorData = new ArmorData() { Armor = new int[] { 100, 200, 300, 400 }, Level = 1, MaxLevel = 4, GoldToUpgradeLevel = new int[] { 30, 40, 50, 60 } },
+            ArmorData = new ArmorData() { Armor = new int[] { 100, 200, 400, 500 }, Level = 1, MaxLevel = 4, GoldToUpgradeLevel = new int[] { 30, 40, 50, 60 } },
             WeaponDataArray = new WeaponData[]
             {
                 new WeaponData { WeaponName = "Shield" ,Damage = new int[] {100, 120, 150, 200}, Level = 1, MaxLevel = 4, GoldToUpgradeLevel = new int[] { 30, 40, 50, 60 } },

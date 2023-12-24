@@ -8416,6 +8416,8 @@ MonoBehaviour:
   _minYVelocity: -15
   _maxYVelocity: 100
   _distanceToCheckIsGrounded: 0.1
+  _walkSound: {fileID: 0}
+  _runSound: {fileID: 0}
 --- !u!114 &1676849264
 MonoBehaviour:
   m_ObjectHideFlags: 0

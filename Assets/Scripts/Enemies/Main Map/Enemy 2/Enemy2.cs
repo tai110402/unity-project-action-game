@@ -31,7 +31,7 @@ public class Enemy2 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (_damageableObject.CurrentHealth >= 0 && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BlockedReaction") && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit"))
+        if (_damageableObject.CurrentHealth > 0 && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("BlockedReaction") && !_enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit"))
         {
             float distance = Vector3.Magnitude(_player.transform.position - transform.position);
 
