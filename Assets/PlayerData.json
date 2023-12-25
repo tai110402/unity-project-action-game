@@ -1,6 +1,6 @@
 {
-    "MaxHP": 100,
-    "CurrentHP": 100,
+    "MaxHP": 1000,
+    "CurrentHP": 1000,
     "Position": {
         "x": 0.0,
         "y": 0.0,

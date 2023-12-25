@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class RuntimePlayerData : MonoBehaviour
 {
-    public static bool _initializeData = false;
+    private static bool _initializeData = false;
     private static PlayerData _playerData = new PlayerData();
     public static PlayerData PlayerData { get { return _playerData; } }
+    public static bool InitializeData { set { _initializeData = value; } }
 
     private void Awake()
     {
@@ -19,7 +20,7 @@ public class RuntimePlayerData : MonoBehaviour
 
     public static void InitializePlayerDefaultValue()
     {
-        _playerData = new PlayerData { MaxHP = 100, CurrentHP = 100, Position = new Vector3(0f, 0f, 0f), Quaternion = new Quaternion(0f, 0f, 0f, 0f), Exp = 200, Gold = 200, BossKillPoint = 1 };
+        _playerData = new PlayerData { MaxHP = 1000, CurrentHP = 1000, Position = new Vector3(0f, 0f, 0f), Quaternion = new Quaternion(0f, 0f, 0f, 0f), Exp = 200, Gold = 200, BossKillPoint = 1 };
     }
 
     public static PlayerData GetPlayerData()
@@ -52,9 +53,9 @@ public class RuntimePlayerData : MonoBehaviour
         player.GetComponent<PlayerMovementManagement>().enabled = false;
         player.GetComponent<PlayerWeaponManagement>().enabled = false;
 
-        RuntimeEquipmentData._initializeData = false;
-        RuntimeSkillData._initializeData = false;
-        RuntimeQuestData._initializeData = false;
+        RuntimeEquipmentData.InitializeData = false;
+        RuntimeSkillData.InitializeData = false;
+        RuntimeQuestData.InitializeData = false;
         _initializeData = false;
 
         RuntimeSkillData.SkillDictionary = new Dictionary<string, Skill>();
