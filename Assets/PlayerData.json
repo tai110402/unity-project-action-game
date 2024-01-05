@@ -1,6 +1,6 @@
 {
     "MaxHP": 1000,
-    "CurrentHP": 1000,
+    "CurrentHP": 972,
     "Position": {
         "x": 0.0,
         "y": 0.0,
@@ -12,7 +12,7 @@
         "z": 0.0,
         "w": 0.0
     },
-    "Gold": 200,
-    "Exp": 200,
+    "Gold": 360,
+    "Exp": 360,
     "BossKillPoint": 1
 }

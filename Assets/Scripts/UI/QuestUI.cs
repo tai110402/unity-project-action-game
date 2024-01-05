@@ -16,7 +16,7 @@ public class QuestUI : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         int distance = (int)Vector3.Magnitude(player.transform.position - currentQuest.Position);
         _content.text = currentQuest.Content;
-        _currentState01.text = distance.ToString() + "m";
+        _currentState01.text = "Distance: " + distance.ToString() + "m";
 
         if (currentQuest.Type == "moving")
         {

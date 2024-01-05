@@ -37,10 +37,10 @@
         {
             "WeaponName": "Axe",
             "Damage": [
+                300,
+                400,
                 500,
-                500,
-                1000,
-                2000
+                600
             ],
             "Level": 1,
             "MaxLevel": 4,
