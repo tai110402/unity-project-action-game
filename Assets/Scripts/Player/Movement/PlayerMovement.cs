@@ -39,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInputActions _playerInputActions;
     private float _currentSpeed;
     private int _movementParameterHash;
+    private float timeFalling = 6f;
+    private float timeStartFalling = -1000f;
+    private bool setFalling = false;
 
     // Getter and Setter
     public bool IsMovePressed { set { _isMovePressed = value; } get { return _isMovePressed; } }
@@ -132,9 +135,29 @@ public class PlayerMovement : MonoBehaviour
         
         Gravity();
 
+        //if (!Physics.Raycast(transform.position, Vector3.down, _jumpHeight))
+        //{
+        //    _playerAnimator.SetFloat(_movementParameterHash, -0.5f);
+        //}
         if (!Physics.Raycast(transform.position, Vector3.down, _jumpHeight))
         {
             _playerAnimator.SetFloat(_movementParameterHash, -0.5f);
+
+            if (setFalling == false)
+            {
+                setFalling = true;
+                timeStartFalling = Time.time;
+            }
+
+            if (Time.time - timeStartFalling > timeFalling)
+            {
+                RuntimePlayerData.PlayerData.CurrentHP -= 10000;
+                _playerAnimator.CrossFade("PlayerDeath", 0f);
+            }
+        } else
+        {
+            timeStartFalling = Time.time - 1000f;
+            setFalling = false;
         }
     }
 
