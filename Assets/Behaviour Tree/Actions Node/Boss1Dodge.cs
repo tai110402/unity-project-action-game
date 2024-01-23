@@ -28,7 +28,8 @@ public class Boss1Dodge : ActionNode
             Vector3 direction = (context.gameObject.transform.position - _playerGameObject.transform.position).normalized;
             if (!context.animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyGetHit") && !context.animator.GetCurrentAnimatorStateInfo(0).IsName("FirstSkill") && !context.animator.GetCurrentAnimatorStateInfo(0).IsName("SecondSkill") && !context.animator.GetCurrentAnimatorStateInfo(0).IsName("ThirdSkill"))
             {
-                context.agent.SetDestination(direction * 10);
+                //context.agent.SetDestination(direction * 10);
+                context.agent.SetDestination(context.gameObject.transform.position + direction * 10);
                 context.agent.speed = _speed;
                 context.agent.angularSpeed = 720;
                 context.animator.CrossFade("Walk", 0f);

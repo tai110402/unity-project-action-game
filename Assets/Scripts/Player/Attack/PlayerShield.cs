@@ -52,12 +52,20 @@ public class PlayerShield : MonoBehaviour
 
         if (Time.time - blockStartTime > blockSkill.TimeCoolDown[blockSkill.Level-1])
         {
-            StartCoroutine(ShieldColliderControl());
-            
-            blockStartTime = Time.time;
-            for (int i = 0; i < _playerAnimator.layerCount; i++)
+            if (RuntimePlayerData.PlayerData.CurrentStamina >= 20)
             {
-                _playerAnimator.CrossFade(blockSkill.AnimationName, 0f, i);
+                RuntimePlayerData.PlayerData.CurrentStamina -= 20;
+                StartCoroutine(ShieldColliderControl());
+
+                blockStartTime = Time.time;
+                for (int i = 0; i < _playerAnimator.layerCount; i++)
+                {
+                    _playerAnimator.CrossFade(blockSkill.AnimationName, 0f, i);
+                }
+            }
+            else
+            {
+                return blockStartTime;
             }
         }
         return blockStartTime;

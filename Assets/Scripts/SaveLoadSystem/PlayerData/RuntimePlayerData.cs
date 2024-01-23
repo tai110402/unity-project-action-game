@@ -20,7 +20,7 @@ public class RuntimePlayerData : MonoBehaviour
 
     public static void InitializePlayerDefaultValue()
     {
-        _playerData = new PlayerData { MaxHP = 400, CurrentHP = 400, Position = new Vector3(0f, 0f, 0f), Quaternion = new Quaternion(0f, 0f, 0f, 0f), Exp = 200, Gold = 200, BossKillPoint = 1 };
+        _playerData = new PlayerData { MaxHP = 400, CurrentHP = 400, MaxStamina = 100, CurrentStamina = 20, Position = new Vector3(0f, 0f, 0f), Quaternion = new Quaternion(0f, 0f, 0f, 0f), Exp = 200, Gold = 200, BossKillPoint = 1 };
     }
 
     public static PlayerData GetPlayerData()

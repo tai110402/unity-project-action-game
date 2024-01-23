@@ -12,6 +12,8 @@ public class PlayerWeaponManagement : MonoBehaviour
     [SerializeField] private PlayerShield _playerShield;
     [SerializeField] private float _timeWaitForCalculateNumberOfClicks = 0.2f;
 
+    private float _timeRegenerateStamina = -10000f;
+
     private PlayerInputActions _playerInputActions;
     private Animator _playerAnimator;
     private bool _isUnequip;
@@ -59,7 +61,46 @@ public class PlayerWeaponManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_isUnequip)
+        {
+            if (GameObject.FindWithTag("Player") != null)
+            {
+                if (GameObject.FindWithTag("Player").gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Blend Tree"))
+                {
+                    RegenerateStamina();
+                }
+            }
+        } else if (_isAxeEquip)
+        {
+            if (GameObject.FindWithTag("Player") != null)
+            {
+                if (GameObject.FindWithTag("Player").gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(1).IsName("Blend Tree"))
+                {
+                    RegenerateStamina();
+                }
+            }
+        } else if (_isSwordEquip)
+        {
+            if (GameObject.FindWithTag("Player") != null)
+            {
+                if (GameObject.FindWithTag("Player").gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(2).IsName("Blend Tree"))
+                {
+                    RegenerateStamina();
+                }
+            }
+        }
+    }
+
+    private void RegenerateStamina()
+    {
+        if (RuntimePlayerData.PlayerData.CurrentStamina < RuntimePlayerData.PlayerData.MaxStamina)
+        {
+            if (Time.time - _timeRegenerateStamina >= 0.1f)
+            {
+                RuntimePlayerData.PlayerData.CurrentStamina += 1;
+                _timeRegenerateStamina = Time.time;
+            }
+        }
     }
 
     private void OnUnequipStart(InputAction.CallbackContext context)

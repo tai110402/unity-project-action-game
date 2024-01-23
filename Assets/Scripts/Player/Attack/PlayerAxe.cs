@@ -88,8 +88,33 @@ public class PlayerAxe : MonoBehaviour, IPlayerWeapon
 
         if (Time.time - skillStartTime > skill.TimeCoolDown[skill.Level-1])
         {
-            skillStartTime = Time.time;
-            _playerAnimator.CrossFade(skill.AnimationName, 0f, _indexOfAxeAnimatorLayer);
+            if (skill.AnimationName == "DefaultFirstNormalAxeSkill" || skill.AnimationName == "DefaultSecondNormalAxeSkill")
+            {
+                if (RuntimePlayerData.PlayerData.CurrentStamina >= 7)
+                {
+                    RuntimePlayerData.PlayerData.CurrentStamina -= 7;
+                    skillStartTime = Time.time;
+                    _playerAnimator.CrossFade(skill.AnimationName, 0f, _indexOfAxeAnimatorLayer);
+                }
+                else
+                {
+                    return skillStartTime;
+                }
+            } else
+            {
+                if (RuntimePlayerData.PlayerData.CurrentStamina >= 13)
+                {
+                    RuntimePlayerData.PlayerData.CurrentStamina -= 13;
+                    skillStartTime = Time.time;
+                    _playerAnimator.CrossFade(skill.AnimationName, 0f, _indexOfAxeAnimatorLayer);
+                }
+                else
+                {
+                    return skillStartTime;
+                }
+            }
+
+            
         }
         return skillStartTime;
     }

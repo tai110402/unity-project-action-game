@@ -7,6 +7,8 @@ public class PlayerData
 {
     public int MaxHP;
     public int CurrentHP;
+    public int MaxStamina;
+    public int CurrentStamina;
     public Vector3 Position;
     public Quaternion Quaternion;
     public int Gold;
