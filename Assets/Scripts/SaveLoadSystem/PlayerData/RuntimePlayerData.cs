@@ -20,7 +20,7 @@ public class RuntimePlayerData : MonoBehaviour
 
     public static void InitializePlayerDefaultValue()
     {
-        _playerData = new PlayerData { MaxHP = 100, CurrentHP = 100, MaxStamina = 100, CurrentStamina = 20, HPBottles = 2, Position = new Vector3(0f, 0f, 0f), Quaternion = new Quaternion(0f, 0f, 0f, 0f), Exp = 200, Gold = 200, BossKillPoint = 1 };
+        _playerData = new PlayerData { MaxHP = 100, CurrentHP = 100, MaxStamina = 100, CurrentStamina = 20, HPBottles = 2, Position = new Vector3(0f, 0f, 0f), Quaternion = new Quaternion(0f, 0f, 0f, 0f), Exp = 200, Gold = 200, BossKillPoint = 1, IsNewGame = true, MouseSensitivity = 40 };
     }
 
     public static PlayerData GetPlayerData()
@@ -68,6 +68,8 @@ public class RuntimePlayerData : MonoBehaviour
         //_playerData = null;
         //RuntimeEquipmentData.EquipmentData = null;
         // only skill data need to initialize
+        PlayerData.IsNewGame = true;
+        PlayerDataSaveLoadSystem.SavePlayerData();
 
         GameObject defeatUI = GameObject.FindWithTag("DefeatUI").transform.GetChild(0).gameObject;
         Cursor.visible = true;

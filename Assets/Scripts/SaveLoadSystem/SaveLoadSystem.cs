@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadSystem : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class SaveLoadSystem : MonoBehaviour
 
     public void SaveData(bool resetPlayerPosition)
     {
+        RuntimePlayerData.PlayerData.IsNewGame = false;
+        RuntimePlayerData.PlayerData.CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SkillDataSaveLoadSystem.SaveSkillData();
 
         if (resetPlayerPosition)

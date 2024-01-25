@@ -15,4 +15,7 @@ public class PlayerData
     public int Gold;
     public int Exp;
     public int BossKillPoint;
+    public bool IsNewGame;
+    public int MouseSensitivity;
+    public int CurrentSceneIndex;
 }
