@@ -1,9 +1,9 @@
 {
     "MaxHP": 100,
-    "CurrentHP": -7,
+    "CurrentHP": 92,
     "MaxStamina": 100,
     "CurrentStamina": 100,
-    "HPBottles": 2,
+    "HPBottles": 1,
     "Position": {
         "x": 0.0,
         "y": 0.0,
@@ -15,10 +15,10 @@
         "z": 0.0,
         "w": 0.0
     },
-    "Gold": 200,
-    "Exp": 200,
+    "Gold": 320,
+    "Exp": 320,
     "BossKillPoint": 1,
     "IsNewGame": true,
     "MouseSensitivity": 40,
-    "CurrentSceneIndex": 1
+    "CurrentSceneIndex": 2
 }
