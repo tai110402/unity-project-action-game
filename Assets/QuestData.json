@@ -4,7 +4,7 @@
             "Id": "start",
             "Title": "Quest 1",
             "Content": "E-Buoc tiep de bat dau",
-            "State": "complete",
+            "State": "doing",
             "Type": "moving",
             "Position": {
                 "x": 0.5199999809265137,
@@ -18,7 +18,7 @@
             "Id": "axe",
             "Title": "Quest 1",
             "Content": "E-Learning Axe Skill",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 0.949999988079071,
@@ -32,7 +32,7 @@
             "Id": "sword",
             "Title": "Quest 1",
             "Content": "E-Learning Sword Skill",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 1.0,
@@ -46,7 +46,7 @@
             "Id": "shield",
             "Title": "Quest 1",
             "Content": "E-Learning Shield Skill",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 1.2799999713897706,
@@ -60,7 +60,7 @@
             "Id": "001",
             "Title": "Quest 1",
             "Content": "E-Di den nga 3 dau tien",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 11.0,
@@ -74,21 +74,21 @@
             "Id": "102",
             "Title": "Quest 2",
             "Content": "E-Danh bai quai vat xuat hien",
-            "State": "complete",
+            "State": "lock",
             "Type": "attack",
             "Position": {
                 "x": 11.0,
                 "y": 0.7400000095367432,
                 "z": 24.0
             },
-            "Progress": 1,
+            "Progress": 0,
             "Condition": 2
         },
         {
             "Id": "003",
             "Title": "Quest 3",
             "Content": "E-Di tiep ve ben phai",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 37.70000076293945,
@@ -102,21 +102,21 @@
             "Id": "104",
             "Title": "Quest 4",
             "Content": "E-Danh bai quai vat 2 xuat hien",
-            "State": "complete",
+            "State": "lock",
             "Type": "attack",
             "Position": {
                 "x": 37.70000076293945,
                 "y": 0.9300000071525574,
                 "z": 18.0
             },
-            "Progress": 1,
+            "Progress": 0,
             "Condition": 2
         },
         {
             "Id": "005",
             "Title": "Quest 5",
             "Content": "E-Di ve nga 3",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 11.0,
@@ -130,7 +130,7 @@
             "Id": "006",
             "Title": "Quest 5",
             "Content": "E-Di thang den chan cau",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 15.0,
@@ -144,7 +144,7 @@
             "Id": "007",
             "Title": "Quest 5",
             "Content": "E-Den ben kia cau",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 40.0,
@@ -158,7 +158,7 @@
             "Id": "008",
             "Title": "Quest 5",
             "Content": "E-Di den bo song",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 76.0,
@@ -172,21 +172,21 @@
             "Id": "109",
             "Title": "Quest 4",
             "Content": "E-Danh bai quai vat 3 xuat hien",
-            "State": "complete",
+            "State": "lock",
             "Type": "attack",
             "Position": {
                 "x": 83.19999694824219,
                 "y": 1.25,
                 "z": 107.0
             },
-            "Progress": 3,
+            "Progress": 0,
             "Condition": 4
         },
         {
             "Id": "010",
             "Title": "Quest 5",
             "Content": "E-Di den hang dong",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 69.0,
@@ -200,21 +200,21 @@
             "Id": "111",
             "Title": "Quest 4",
             "Content": "E-Danh bai quai vat 4 xuat hien",
-            "State": "complete",
+            "State": "lock",
             "Type": "attack",
             "Position": {
                 "x": 63.0,
                 "y": 0.5,
                 "z": 154.0
             },
-            "Progress": 3,
+            "Progress": 0,
             "Condition": 4
         },
         {
             "Id": "012",
             "Title": "Quest 5",
             "Content": "E-Di vao cong khong gian",
-            "State": "complete",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 98.2699966430664,
@@ -228,7 +228,7 @@
             "Id": "axe",
             "Title": "Quest 1",
             "Content": "E-Learning New Axe Skill",
-            "State": "doing",
+            "State": "lock",
             "Type": "moving",
             "Position": {
                 "x": 0.949999988079071,
