@@ -17,6 +17,13 @@ public class BlockEnemySkill : MonoBehaviour
                 GameObject.Destroy(other.gameObject);
                 StartCoroutine(ApplyHitForce(_duration));
                 //GameObject.FindWithTag("Player").GetComponent<Animator>().CrossFade("BlockImpact", 0f, 1);
+                if (RuntimePlayerData.PlayerData.CurrentStamina >= 3)
+                {
+                    RuntimePlayerData.PlayerData.CurrentStamina -= 3;
+                } else
+                {
+                    RuntimePlayerData.PlayerData.CurrentStamina = 0;
+                }
             }
         }
 

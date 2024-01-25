@@ -20,7 +20,7 @@ public class RuntimePlayerData : MonoBehaviour
 
     public static void InitializePlayerDefaultValue()
     {
-        _playerData = new PlayerData { MaxHP = 400, CurrentHP = 400, MaxStamina = 100, CurrentStamina = 20, Position = new Vector3(0f, 0f, 0f), Quaternion = new Quaternion(0f, 0f, 0f, 0f), Exp = 200, Gold = 200, BossKillPoint = 1 };
+        _playerData = new PlayerData { MaxHP = 100, CurrentHP = 100, MaxStamina = 100, CurrentStamina = 20, HPBottles = 2, Position = new Vector3(0f, 0f, 0f), Quaternion = new Quaternion(0f, 0f, 0f, 0f), Exp = 200, Gold = 200, BossKillPoint = 1 };
     }
 
     public static PlayerData GetPlayerData()
@@ -38,6 +38,11 @@ public class RuntimePlayerData : MonoBehaviour
         if (_playerData.CurrentHP <= 0)
         {
             StartCoroutine(Defeat());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            UseHPBottle();
         }
     }
 
@@ -69,5 +74,22 @@ public class RuntimePlayerData : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         yield return new WaitForSeconds(2f);
         defeatUI.SetActive(true);
+    }
+
+    private void UseHPBottle()
+    {
+        if (PlayerData.HPBottles >= 1)
+        {
+            if (PlayerData.CurrentHP + 25 > PlayerData.MaxHP)
+            {
+                PlayerData.CurrentHP = PlayerData.MaxHP;
+            }
+            else
+            {
+                PlayerData.CurrentHP += 25;
+            }
+
+            PlayerData.HPBottles -= 1;
+        }
     }
 }

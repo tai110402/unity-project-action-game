@@ -13,6 +13,7 @@ TagManager:
   - DefeatUI
   - SwordSlot
   - AxeSlot
+  - HPBottle
   layers:
   - Default
   - TransparentFX
